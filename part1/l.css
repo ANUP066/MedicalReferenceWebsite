@@ -1,0 +1,143 @@
+
+@font-face {
+            font-family: sansation;
+            src: url(profonts/SansationLight.woff);
+         }
+@font-face {
+      font-family: dakota;
+      src:url(profonts/dakota_update.ttf);
+}
+@font-face {
+      font-family: rounD;
+      src: url(profonts/RounD-Regular.ttf);
+}
+@font-face{
+      font-family: prod;
+      src:url(profonts/Product Sans Regular.ttf);
+}
+@font-face{
+      font-family: nikoleta;
+      src:url(profonts/NIKOLETA.ttf);
+}
+@font-face{
+      font-family: mona;
+      src:url(profonts/Mona-Free.woff);
+      font-stretch: expanded;
+}
+@font-face{
+      font-family: belda ;
+      src:url(profonts/insigne - Belda Norm Regular.otf);
+}
+@font-face{
+    font-family: architex;
+    src:url(profonts/Architex.ttf);
+}
+@font-face{
+  font-family: goodtimes;
+  src:url(profonts/good times rg.ttf);
+}
+body{margin:0;background-color: snow;padding: 0;}
+nav{background-color: #333;position: fixed;top: 0;left:0;width: 100%;z-index: 1;margin: 0 auto;padding: 0;}
+nav ul {list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #333;}
+nav ul li{float: left;}
+nav ul li a {display: inline-block; color: snow;text-align: center;text-decoration: none;padding: 14px 17px;height: 23px;font-size: 17px;font-family: sansation;}
+
+nav ul li a:hover {background-color: silver;color:black;}
+nav ul li.dropdown div.dropdown-content {display: block;position: absolute;background-color: #f9f9f9;min-width: 160px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 2;}
+nav ul li.dropdown div.dropdown-content a {color: black;padding: 12px 16px;text-decoration: none;display: none;text-align: left;}
+nav ul li.dropdown div.dropdown-content a:hover {background-color: #f1f1f1}
+nav ul li.dropdown:hover div.dropdown-content a{display: block;}
+nav li a.active { background-color: lightseagreen;color:black;}
+nav li a.logo{background-color: yellowgreen;color:black;}
+nav li.button{float:right;}
+li.button input{background-color: #333;border: 2px;border-color:snow;border-radius:10px;border-style:solid;color: snow;text-align: center;text-decoration: none;font-size: 17px; margin: 4px 4px;cursor: pointer;padding:12px 17px 8px;font-family: sansation;}
+li.button input:hover{background-color: snow;border: 2px;border-color:snow;border-radius:10px;border-style:solid;color: black;}
+nav li.icon ,a.icon{
+  display: none;
+  float: right;
+}
+
+@media screen and (max-width: 750px) {
+  nav ul li a{display: none;}
+  nav ul li a.logo{display: block;float:center;} 
+   nav ul li.icon ,a.icon{
+    display: block;
+    float: right;
+  }
+}
+@media screen and (max-width: 750px) {
+  nav.responsive {position: fixed;top: 0px;}
+  nav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  nav.responsive li{float:none;}
+  nav.responsive li a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  nav.responsive li.button input{position: relative;left: 35%;}
+}
+#first{background-image: url(1.jpg);
+  margin-top: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height:300px;
+  background-attachment: fixed;
+  z-index: 0;
+  padding: 5% 9% 10% 2%;}
+#first h2{color: snow;font-size: 60px;font-family:mona;font-weight: 1px;text-decoration: none;position: absolute;left: 42%}
+#first a{color :white;text-decoration: none;position: absolute;top: 480px;left: 50%;font-size: 50px;-webkit-transition: all 1s ease}
+#first a:hover{color: crimson;}
+
+#sec,#fourth,#sixth{background-color:white;padding-top:1%;padding-bottom: 2%;}
+#sec h2 ,#sixth h2{color:steelblue;font-size: 30px;font-family:nikoleta;text-align: center;margin-top: 50px;}
+#sec p,#sixth p{font-size: 17px;width:80%;font-family: belda;position: relative;top: 0px;left:150px;overflow: hiddens;text-overflow: hidden;}
+#insec{
+  background-color: white;
+  padding:3%;
+}
+#insec td.tab{text-align: center;background-color:white;}
+#insec img{-webkit-transition:transform 1s;/* transition: transform 1s;*/}
+#insec img:hover{-webkit-transform:rotate(360deg);/* transform: rotate(180deg);*/}
+td.tab a{text-align: center;color :steelblue;font-family: nikoleta;font-size: 20px;background-color:white;text-decoration: none;}
+td.tab a:hover{text-shadow: 2px 2px 4px #333;}
+#insec table{background-color: white;}
+blockquote{font-size: 20px;font-family: mona;text-align: center;margin-top: 50px;}
+p.a{color:steelblue;text-align: center;font-size: 40px;font-family: architex;margin-top: 50px;}
+#third{background-image: url(Medical-Healthcare-Background-Stock-Photo.jpg);
+  margin-top: 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height:300px;
+  background-attachment: fixed;
+  padding: 5% 9% 10% 2%;position: relative;}
+#third h4,#fifth h4{color:black;font-size: 70px;font-weight: 0.5px;text-decoration: none;position: absolute;top:0px;font-family: nikoleta;}
+#third p{color:black;font-size: 20px;font-weight: 1px;text-decoration: none;position: absolute;top:230px;font-family: nikoleta;}
+#fourth h2{color:steelblue;font-size: 40px;font-family:nikoleta;text-align: center;margin-top: 50px;}
+#fourth div table h3{color:steelblue;font-size: 20px;font-family:nikoleta;}
+#fourth div table p{font-size: 17px;font-family: belda;}
+#fourth table ul.list1{position: relative;left:50px;top:-50px;}
+#fourth div table h4{color:steelblue;font-size: 17px;font-family:nikoleta;}
+#fifth{background-image: url(heal1.jpg);
+  margin-top: 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height:300px;
+  background-attachment: fixed;
+  padding: 5% 9% 10% 2%;position:relative;}
+  #sixth img#FMH2{position: relative;left: 250px;top: 30px}
+  #sixth img#FMH2:hover{position: relative;left: 250px;top: 30px;height: 120px;width :180px;}
+  #sixth blockquote.FMH2{position: relative;top: -60px;}
+  #sixth blockquote.FMH21{position: relative;right: 90px;top: -40px}
+  #sixth img#FMH21{position: relative;left: 900px;top: -100px}
+  #sixth img#FMH21:hover{position: relative;left: 900px;top: -100px;height: 160px;width:160px;}
+#seventh h2{color:steelblue;font-size: 30px;font-family:nikoleta;width:80%;position: relative;top: -80px;left: 150px}
+#seventh p{font-size: 17px;width:80%;font-family: belda;position: relative;top: -60px;left:150px;}
+span{text-align: center;}
+#last{background-color: black;color:white;padding:5%;font-family: belda;text-align: center; }

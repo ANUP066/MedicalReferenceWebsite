@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Login</title>
+  <link rel="icon" href="icons8-Doctors Bag-40.png">
+	<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+<nav id="nav">
+	<ul>
+   <li><a href="#logo" class="logo"><img src="hi1.svg" height="23px" width="27px" /></a></li>
+   <li><a href="home.html" >HOME</a></li>
+   <li><a href="mini project/diseases.html">INFO</a></li>
+   <li class="dropdown">
+   <a href="javascript:void(0)" class="dropbtn">SERVICES</a>
+    <div class="dropdown-content">
+      <a href="fhm.html">Hospitals</a>
+      <a href="#">IT</a>
+      <a href="#">National Healthcare</a>
+      <a href="stratplan.html">Strategic Planning</a>
+      <a href="manage.html">Management Consulting</a>
+    </div>
+   </li>
+   <li><a href="contact.html">CONTACT US</a></li>
+   <li><a href="#about">ABOUT US</a> </li>
+   <li><a href="login.html" id="login" class="active">LOGIN</a></li>
+   <li class="button"><form method="GET" action="proprac.php"><input type="submit" value="Register"></form></li>
+   <li class="icon"><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a></li>
+   </ul>
+</nav>
+ <div id="log">
+  <img src="loginlogo.png" style="position: relative;top: 30px;left :285px;opacity: 1"><br>
+ <form method='post' action='pass.php' id='form'  name="myForm">
+  <label id="logid">LOGIN ID :</label><br><input type="text" name="id" placeholder="username"><br><br>
+  <label id="logpass">PASSWORD :</label><br><input type="password" name="password" placeholder="password"><br><br>
+  <button type="submit" onclick ="valid()">Login</button><br>
+  <input type="checkbox" checked="checked"> Remember me
+  <br><br><br>
+  <button type="button" class="cancelbtn">Cancel</button>
+  <span class="psw">Forgot <a href="#">password?</a></span>
+ </form>;
+
+ </div>
+ <script>
+function myFunction() {
+    var x = document.getElementById("nav");
+    if (x.className === "") {
+        x.className += " responsive";
+    } else {
+        x.className = "";
+    }
+}
+var form=document.getElementById("form");
+form.addEventListener("submit",valid,false);
+function valid(){
+    var x = document.forms["myForm"]["id"].value;
+    var y = document.forms["myForm"]["password"].value;
+    if ((x == null || x == "")) {
+        form.innerHTML='<label id="logid">LOGIN ID : <span>enter the id</span></label><br><input type="text" name="id" placeholder="username"><br><br>'+
+  '<label id="logpass">PASSWORD : <span>enter the password</span></label><br><input type="password" name="password" placeholder="password"><br><br>'+
+  '<button type="submit" onclick ="valid()">Login</button><br>'+
+  '<input type="checkbox" checked="checked"> Remember me'+
+  '<br><br><br>'+
+  '<button type="button" class="cancelbtn">Cancel</button>'+
+  '<span class="psw">Forgot <a href="#">password?</a></span>';
+     }
+}
+
+</script>
+</body>
+
+</html>
