@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <style>
+        @font-face
+        {       font-family:belda;
+                src:url(beldaf.otf);
+        }
+         
+         #f1_container {
+          position: relative;
+          margin: 10px auto;
+          width: 400px;
+          height: 281px;
+          z-index: 1;
+        }
+        #f1_container {
+        perspective: 1000;
+        }
+        #f1_card {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 1.0s linear;
+        }
+        #f1_container:hover #f1_card {
+        transform: rotateY(180deg);
+        box-shadow: -5px 5px 5px #aaa;
+        }
+        .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        }
+        .face.back {
+        display: block;
+        transform: rotateY(180deg);
+        box-sizing: border-box;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        background-color: #aaa;
+        }
+ 
+        
+        #a1{color:blue}
+        
+        h1{text-align:center;font-size:70px;}
+        
+        #headings{background-color:blue;font-size:30px;}
+        
+        #abcd{background-image: url(back3.jpg);
+        background-repeat: no-repeat; background-attachment: fixed;}
+                 
+        {box-sizing:border-box}
+
+        
+        .slideshow-container {
+        max-width: 700px;
+        position: relative;
+        margin: auto;
+        }
+
+        .mySlides {
+        display: none;
+        }
+
+        
+        .prev, .next {
+        cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+        }
+
+        
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        
+        .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+        }
+
+        
+        .text {
+        color: black;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        background-color:green;
+        }
+
+       
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        
+        .dot {
+        cursor:pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+
+       
+        .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+        }
+
+        @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+        }
+        
+       
+
+            
+        </style>       
+</head>
+<body id="abcd">
+        <h1 style="font-family:belda"><span id="a1">Med</span>-News</h1>
+        
+        <div id="headings">RECENT NEWS</div>
+        
+        <div class="slideshow-container">
+        <div class="mySlides fade">
+        <div class="numbertext">1 / 5</div>
+        <img src="img1.jpeg" style="width:100%">
+        <div class="text" ><h3>Xstrahl receives FDA 510(k) clearance for marketing its photoelectric therapy system</h3></div>
+        </div>
+
+        <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="giv.jpg" style="width:100%">
+        <div class="text" ><h3>SP scientific reports on expanding applications for Hotpack Stability Chambers.</h3></div>
+        </div>
+
+        
+        
+        <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="index1.jpeg" style="width:100%">
+        <div class="text"><h3>Liver cancers linked to compound popular in herbal remedies.</h3></div>
+        </div>
+        
+        <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="img3a.jpeg" style="width:100%">
+        <div class="text"><h3>Brain function does not die immediately after the heart stops finds study.</h3></div>
+        </div>
+        
+        <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="img5.jpeg" style="width:100%">
+        <div class="text"><h3>Dyslexia could be the result of eye spot that confuses the brain finds study.</h3></div>
+        </div>
+        
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        
+        </div>
+        
+        
+
+        <div id="headings">HEALTH ARTICLES</div>
+        <table>
+        <tr>
+        <td>
+        <div id="f1_container">
+        <div id="f1_card" class="shadow">
+        <div class="front face">
+        <img src="img1a.jpeg" alt="Klematis">
+        <h3>Alstrome syndrome research</h3>
+        </div>
+        <div class="back face center">
+        <p>The ALMS1 gene has been the locus of research because of its association with obesity and the metabolic syndrome.</p>
+        </div>
+        </div>
+        </div>
+        </td>
+        
+        <td>
+        <div id="f1_container">
+        <div id="f1_card" class="shadow">
+        <div class="front face">
+        <img src="img2a.jpeg" alt="Klematis">
+        <h3>Dyspareunia treatment</h3>
+        </div>
+        <div class="back face center">
+        <p>Dyspareunia is a condition that can be defined as a recurrent and (often) unremitting urogenital pain that is observed before, during, or even after penetration.</p>
+        </div>
+        </div>
+        </div>
+        </td>
+        
+        <td>
+        <div id="f1_container">
+        <div id="f1_card" class="shadow">
+        <div class="front face">
+        <img src="img3a.jpeg" alt="Klematis">
+        <h3>Asphyxiating Thorasis Dysplasia</h3>
+        </div>
+        <div class="back face center">
+        <p>The outcome is very often fatal especially in infants who are born with extremely narrow or bell-shaped chest cavities. </p>
+        </div>
+        </div>
+        </div>
+        </td>
+        </tr>
+        
+             
+        </table> 
+        
+        <div id="headings">WHITE PAPERS</div>
+        <table>
+        <tr>
+        
+        <td>
+        <div id="f1_container">
+        <div id="f1_card" class="shadow">
+        <div class="front face">
+        <img src="img1b.jpeg" alt="Klematis">
+        <h3>Dialysis needle sharpness testing</h3>
+        </div>
+        <div class="back face center">
+        <p>A custom fixture was designed to permit controlled adjustment of the insertion angle of the test sample, normally a standard specification of 15 degrees is used.</p>
+        </div>
+        </div>
+        </div>
+        </td>
+        
+        <td>
+        <div id="f1_container">
+        <div id="f1_card" class="shadow">
+        <div class="front face">
+        <img src="img2b.jpeg" alt="Klematis">
+        <h3>Tubing device</h3>
+        </div>
+        <div class="back face center">
+        <p>A simple console-controlled force testing system is more than adequate for routine tensile strength testing in the production floor.</p>
+        </div>
+        </div>
+        </div>
+        </td>
+        
+        <td>
+        <div id="f1_container">
+        <div id="f1_card" class="shadow">
+        <div class="front face">
+        <img src="img3b.jpeg" alt="Klematis">
+        <h3>Mecmesin's multitest 1-i</h3>
+        </div>
+        <div class="back face center">
+        <p>A leading designer and manufacturer of force and torque test equipment for over 40 years, Mecmesin offers precision test instruments and systems that are accurate, reliable and excellent value for money.</p>
+        </div>
+        </div>
+        </div>
+        </td>
+        
+        </tr>
+              
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+        </script>
+        
+
+</body>
+</html
