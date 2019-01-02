@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+#myProgress {
+    position: relative;
+    left:250px;
+    top:250px;
+    width: 60%;
+    height: 30px;
+    background-color: grey;
+    vertical-align: center;
+}
+#myBar {
+    position: absolute;
+    width: 1%;
+    height: 100%;
+    background-color: green;
+}
+#label {
+  position: relative;
+  top:227px;
+  left:1049px;
+  line-height: 30px;
+  color: white;
+}
+#p{
+    position: relative;
+    left:250px;
+    top:250px;
+    
+}
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div id="myProgress" >
+    <div id="myBar">
+            
+    </div>
+</div>
+    <br>
+    <button onclick="move()"id="p">Click Me</button><div id="label">0%</div> 
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">open</span>
+
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "50%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      document.getElementById("label").innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>     
+</body>
+</html>

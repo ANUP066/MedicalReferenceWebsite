@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<input type="button" id="add" value="Add"/>
+		<input type="button" id="delete" value="Delete"/>
+	</body>
+	<!--<div id="">
+	</div>-->
+
+	<script>
+		var obj={
+
+		add:function(){
+			console.log("adding");
+			var a=document.createElement("div");
+			var b=document.createElement("input");
+			b.type="text";
+			b.id="b";
+			//a.setAttribute("input","text");
+			//document.write("<br>");
+			var comm=document.createElement("textarea");
+			comm.id="comm";
+			saveBtn=document.createElement("input");
+			saveBtn.type="button";
+			saveBtn.value="Save";
+			saveBtn.addEventListener("click",this.save,false);
+
+			a.appendChild(b);
+			a.appendChild(comm);
+			a.appendChild(saveBtn);
+			document.body.appendChild(a);
+			},
+		del:function(){
+			console.log("deleting");
+		}
+		save:function(e){
+			var pn=e.target.parentNode;
+			var i=pn.
+		}
+		}
+		var addBtn=document.getElementById("add");
+		var delBtn=document.getElementById("delete");
+		addBtn.addEventListener("click",obj.add,false);
+		delBtn.addEventListener("click",obj.del,false);
+	</script>
+</html>
+

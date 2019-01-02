@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+a{
+    text-decoration: none;
+  }
+span{
+  font-family: Arial;
+  font-size: 20%;
+}
+.alert {
+    padding: 10px;
+    background-color: lightgrey; /* Red */
+    color: black;
+    margin-bottom: 9px;
+    
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    font-family: Arial;
+    color: black;
+    padding-top: 5px;
+    padding-right: 7.5px;
+    padding-left: 7.5px;
+    padding-bottom:7px;
+    /*font-weight: bold;*/
+    float: right;
+    font-size:12px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: white;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    background-color: #006666;
+    opacity: 0.9;
+    /*background-color: rgba(0,0,0, 0.9);*/
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+/*
+#myProgress {
+    position: relative;
+    left:250px;
+    top:250px;
+    width: 60%;
+    height: 30px;
+    background-color: grey;
+    vertical-align: center;
+}
+#myBar {
+    position: absolute;
+    width: 1%;
+    height: 100%;
+    background-color: green;
+}
+#label {
+  position: relative;
+  top:227px;
+  left:1049px;
+  line-height: 30px;
+  color: white;
+}
+#p{
+    position: relative;
+    left:250px;
+    top:250px;
+    
+}*/
+/*
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}*/
+</style>
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+  <!--<div id="myProgress" >
+    <div id="myBar">
+            
+    </div>
+</div>
+    <br>
+    <button onclick="move()"id="p">Click Me</button><div id="label">0%</div> 
+</div>-->
+
+<div  style="border-width:10px; 
+    border-color: black;">
+    <div style="background-color:white;width:40%"></div><div style="background-color:#FFCC33"class="closebtn" onclick="closeNav()">&nbsp&nbsp&nbspHIDE &nbspX&nbsp&nbsp</div> <br><br>
+    <div class="alert" style="border-width:10px; 
+    border-color: black;">
+      
+      <a id="r" onmouseover="fne()" onmouseout="fno()"><input type="radio" name="radio" onclick="fn()" >BOOK PHYSICAL APPOINTEMENT</a>
+    <hr>
+      <a id="r1" onmouseover="fne1()" onmouseout="fno1()"><input type="radio"  name="radio"  onclick="fn1()">CONSULT A DOCTOR</a>
+
+    </div>
+    </div>
+  </div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">open</span>
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "17%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      document.getElementById("label").innerHTML = width * 1  + '%';
+    }
+  }
+}
+function fn(e)
+      {
+        var i=document.getElementById("r");
+        i.style.color="blue"
+        window.location.href="proprac.html";
+      }
+      function fne(e)
+      {
+        var i=document.getElementById("r");
+        i.style.color="blue"
+      }
+      function fno(e)
+      {
+        var i=document.getElementById("r");
+        i.style.color="black"
+      }
+      function fne1(e)
+      {
+        var i=document.getElementById("r1");
+        i.style.color="blue"
+      }
+      function fno1(e)
+      {
+        var i=document.getElementById("r1");
+        i.style.color="black"
+      }
+      function fn1(e)
+      {
+        var i=document.getElementById("r1");
+        i.style.color="blue"
+        window.location.href="proj.html";
+      }
+</script>     
+</body>
+</html>

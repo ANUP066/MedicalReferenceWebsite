@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.a {
+  
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+#i{
+  color: blue;
+  font-family: Verdana;
+  text-align: center;
+}
+
+</style>
+<body>
+<div >
+  
+  <h2 id="i">Centers of Excellence</h2>
+  <p align="center" >Combining the best specialists and equipment to <br>provide you nothing short of the best in healthcare</p>
+<div class="slideshow-container">
+
+<div class="mySlides">
+  
+  <a id="dia1"><img src="preventive-medicine(1).png" onmouseover="change0()" onmouseout="changeb0()" id="dia"><br><i class="a">Preventive Diseases</i></a>
+  
+</div>
+
+<div class="mySlides">
+  
+  <a id="hrt1" href="proj.html"><img src="heart(1).png" onmouseover="change1()" onmouseout="changeb1()" id="hrt"><br><i class="a">Heart</i></a>
+ 
+</div>
+
+<div class="mySlides">
+  
+  <a id="ort1"><img src="orthopaedics(2).png" onmouseover="change2()" onmouseout="changeb2()" id="ort"><i class="a">Orthopaedics</i></a>
+ 
+  
+</div>
+<div class="mySlides">
+  
+  <a id="neu1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="neurosciences(1).png" onmouseover="change3()" onmouseout="changeb3()" id="neu"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <a id="spn1"><img src="spine(1).png" onmouseover="change4()" onmouseout="changeb4()" id="spn"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <a id="trv1"><img src="transplants(1).png" onmouseover="change5()" onmouseout="changeb5()" id="trv"></a><br>
+  <a id="neu1" style="text-indent:1000px"><i onmouseover="change3()" onmouseout="changeb3()" id="neu1">Neurosciences</i></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a><i style="text-indent:450px">Spine</i></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a><i style="text-indent:600px">Transplants</i></a>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)"> < </a>
+<a class="next" onclick="plusSlides(1)"> > </a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length} ;
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].classList.remove("active");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].classList.add("active");
+}
+function change0(n){
+  var h=document.getElementById("dia");
+  h.setAttribute("src","preventive-medicine(2).png");
+  var a=document.getElementById("dia1");
+  a.style.color="blue";
+
+}
+function changeb0(n){
+  var h=document.getElementById("dia");
+  h.setAttribute("src","preventive-medicine(1).png");
+  var a=document.getElementById("dia1");
+  a.style.color="black";
+
+}
+
+function change1(n){
+  var h=document.getElementById("hrt");
+  h.setAttribute("src","heart(2).png");
+  //h.setAttribute("href","proj.html");
+  var a=document.getElementById("hrt1");
+  a.style.color="blue";
+
+}
+function changeb1(n){
+  var h=document.getElementById("hrt");
+  h.setAttribute("src","heart(1).png");
+
+  var a=document.getElementById("hrt1");
+  a.style.color="black";
+
+}
+function change2(n){
+  var h=document.getElementById("ort");
+  h.setAttribute("src","orthopaedics(1).png");
+  var a=document.getElementById("ort1");
+  a.style.color="blue";
+
+}
+function changeb2(n){
+  var h=document.getElementById("ort");
+  h.setAttribute("src","orthopaedics(2).png");
+  var a=document.getElementById("ort1");
+  a.style.color="black";
+}
+function change3(n){
+  var h=document.getElementById("neu");
+  h.setAttribute("src","neurosciences(2).png");
+  var a=document.getElementById("neu1");
+  a.style.color="blue";
+
+}
+function changeb3(n){
+  var h=document.getElementById("neu");
+  h.setAttribute("src","neurosciences(1).png");
+  var a=document.getElementById("neu1");
+  a.style.color="black";
+
+}
+function change4(n){
+  var h=document.getElementById("spn");
+  h.setAttribute("src","spine(2).png");
+  var a=document.getElementById("spn1");
+  a.style.color="blue";
+
+}
+function changeb4(n){
+  var h=document.getElementById("spn");
+  h.setAttribute("src","spine(1).png");
+  var a=document.getElementById("spn1");
+  a.style.color="black";
+
+}
+function change5(n){
+  var h=document.getElementById("trv");
+  h.setAttribute("src","transplants(2).png");
+  var a=document.getElementById("trv1");
+  a.style.color="blue";
+
+}
+function changeb5(n){
+  var h=document.getElementById("trv");
+  h.setAttribute("src","transplants(1).png");
+  var a=document.getElementById("trv1");
+  a.style.color="black";
+
+}
+</script>
+
+</body>
+
