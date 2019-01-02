@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<style>
+/** {
+    box-sizing: border-box;
+}
+*/
+body {
+    margin: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: white;
+    font-family: Arial;
+}
+
+.navbar a {
+    float: left;
+    font-size: 14px;
+    color: #FF6600;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: static;
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 14px;    
+    border: none;
+    outline: none;
+    color: #FF6600;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: lightgrey;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 50%;
+    left: 48px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content .header {
+    background: #ccc;
+    padding-left: 10px;
+    padding-right:2px;
+    padding-bottom:2px;
+    padding-top:2px;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 30%;
+    padding: 5px;
+    background-color: #ccc;
+    height: 250px;
+}
+
+.column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.column a:hover {
+    background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.slideshow-box {
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+  z-index: 0;
+}
+
+
+.bef, .aft {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+
+.aft {
+  right: 100px;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.bef:hover, .aft:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.flip-container {
+        margin: 50px;
+        position: relative;
+        left:80px;
+        perspective: 1000;
+        display: inline-block;
+    }
+    .flip-container:hover .card {
+        transform: rotateY(180deg);
+    }
+    .card, .front, .back {
+        width: 230px;
+        height: 280px;
+    }
+    .card {
+        transition: 0.5s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    .front, .back {
+        backface-visibility: hidden;
+        position: absolute;
+    }
+    .front {
+        z-index: 1;
+        transform: rotateY(0deg);
+        background-color: white;
+        border: 1.5px solid #ffa07a; 
+    }
+    .back {
+        z-index: 2; /* back side, placed above front */
+        transform: rotateY(180deg);
+        border: 1.5px solid #ffa07a;
+    }
+    input[type=text]#myInp {
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 12px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width .4s ease-in-out;
+    transition: width .4s ease-in-out;
+}
+
+input[type=text]#myInp:focus {
+    width: 20%;
+}
+.sidenav {
+    height: 15.8%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 133px;
+    left: 37px;
+    margin-top:0;
+    background-color: lightgrey; 
+    overflow-x: hidden;
+    overflow-y: hidden; 
+    /*cursor: pointer;*/
+    transition: 0.5s;
+}
+.closebtn {
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    font-size: 30px;
+    color:#FF6600;
+    cursor: pointer;
+}
+#myBtn1 {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 11px;
+  border-radius: 190px;
+  opacity:0.9;
+}
+
+#myBtn1:hover {
+  background-color: #555;
+}
+.fa {
+  padding: 15px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: lightgrey;
+  color: white;
+}
+
+.fa-twitter {
+  background: lightgrey;
+  color: white;
+}
+
+.fa-google {
+  background: lightgrey;
+  color: white;
+}
+
+.fa-linkedin {
+  background: lightgrey;
+  color: white;
+}
+
+.fa-youtube {
+  background: lightgrey;
+  color: white;
+}
+</style>
+</head>
+<body>
+<div style="background-color:#FF6600;width:100%;height:10px;"></div><br>
+<div style="left:100px;position:relative">
+
+<div class="navbar" >
+  <a href="home"><input type="image" src="home2.png" style="width:15px;height:15px"  ></a>
+  <div class="dropdown">
+    <button class="dropbtn">PLANS 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <p>Mega Menu</p>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h3>Category 1</h3>
+            <a >Link 1</a>
+            <a >Link 2</a>
+            <a >Link 3</a>
+        </div>
+        <div class="column">
+          <h3>Category 2</h3>
+          <a >Link 1</a>
+          <a >Link 2</a>
+          <a >Link 3</a>
+        </div>
+        <div class="column">
+          <h3>Category 3</h3>
+          <a >Link 1</a>
+          <a >Link 2</a>
+          <a >Link 3</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <a href="news">RENEW</a>
+  <a href="news">CUSTOMER SERVICE</a>
+  <a href="news">ABOUT US</a>
+  <input id="myInp" type="text" name="search" style="position:relative;left:10px;width:200px;height:40px;border-radius:13px;">
+  <a><img src="appl.png" style="position:absolute;left:800px;top:-30px;z-index=2"></a>
+</div>
+</div>
+<br><br>
+
+<div id="mySidenav" class="sidenav">
+  <a  class="closebtn" onclick="closeNav()">&times;</a>
+  <img src="claim3.png"></img>
+</div>
+<div style="position:fixed;width:35px;height:140px;background-color:lightgrey;margin-left:1px;border-radius:5px;padding-top:5px;padding-bottom:5px;z-index:1" onclick="openNav()"><img src="claim.png" style="margin-left:10px"></div>
+<div class="slideshow-box" >
+
+        <div class="Slimy" style="left:100px;position:relative">
+          <span style="color:#FF6600;font-size:30px;font-weight:bold;font-family:sans-serif;position:relative;bottom:200px">HEALTH INSURANCE PLANS</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <span><img src="slider2.jpg" ></span>
+          <div style="width:30%;height:50%;position:relative;bottom:180px;font-family:sans-serif;font-size:20px">Apollo Munich's innovative, simple and award-winning health policies with 100% cashless hospitalization benefit that let you take care your loved ones medical needs.</div>
+          <button  style="background-color:#FF6600;font-size:15px;font-family:sans-serif;padding:10px;border-radius:3px;position:relative;bottom:160px;left:5px;width:7%" >FAMILY</button>
+  
+        </div>
+
+        <div class="Slimy" style="left:50px;position:relative">
+  
+         <img src="Amhi.jpg">
+ 
+        </div>
+        <a class="bef" onclick="plusSli(-1)"> < </a>
+        <a class="aft" onclick="plusSli(1)"> > </a>
+
+  </div>
+  <div class="flip-container">
+        <div class="card">
+            <div class="front">
+                <div style="display:inline-block">
+                <span><img src="FamilyInsurance.png" style="width:80px;height:80px;position:relative;top:10px;left:14px"></span>
+                <div style="width:100px;height:100px;position:relative;left:90px;bottom:20px">
+                <span STYLE="position:relative;color:#FF6600;;bottom:50px;left:15px;font-family:Verdana,sans-serif;font-size:15px">FAMILY HEALTH INSURANCE</span>
+                </div>
+                </div>
+                <div style="width:190px;height:100px;position:relative;left:14px;bottom:100px">
+                <p style="font-family:Verdana,sans-serif;font-size:13px">Health Insurance for best healthcare, for protecting what’s dear, and most importantly, for peace of mind.</p>
+                </div>                           
+            </div>
+            <div class="back">
+
+                <div style="width:180px;height:100px;position:relative;left:14px;top:2px">
+                <p style="font-family:Verdana,sans-serif;">FUN FACT</p>
+                <p style="font-family:Verdana,sans-serif;font-size:12px">The Apollo Astronauts, unable to qualify for life insurance and not insured by NASA, resorted to ‘insurance autographs’, signing just before launch in the expectation that the value would skyrocket in the event of their deaths.</p>
+                </div>   
+                <button STYLE="position:relative;top:78px;left:14px;background-color:#FF6600;padding:8px;font-family:Verdana,sans-serif;font-size:12px">Buy Individual Plan</button>
+                <button STYLE="position:relative;top:80px;left:14px;background-color:#FF6600;padding:8px;font-family:Verdana,sans-serif;font-size:12px">Buy Family Plan</button>
+            </div>
+        </div>
+    </div>
+    <div class="flip-container" style="margin-left:-10px;margin-right:0;margin-top:0;margin-bottom:50px">
+        <div class="card">
+            <div class="front">
+               <div style="display:inline-block">
+                <span><img src="pln.png" style="width:80px;height:80px;position:relative;top:10px;left:14px"></span>
+                <div style="width:100px;height:100px;position:relative;left:90px;bottom:20px">
+                <span STYLE="position:relative;color:#FF6600;;bottom:50px;left:15px;font-family:Verdana,sans-serif;font-size:15px">TRAVEL HEALTH INSURANCE</span>
+                </div>
+                </div>
+                <div style="width:180px;height:100px;position:relative;left:14px;bottom:100px">
+                <p style="font-family:Verdana,sans-serif;font-size:13px">Travel Insurance for unexpected contingencies while you travel and for any medical or non-medical expense that may come up.</p>
+                </div>                 
+            </div>
+            <div class="back">
+                <div style="width:180px;height:100px;position:relative;left:14px;top:2px">
+                <p style="font-family:Verdana,sans-serif;">FUN FACT</p>
+                <p style="font-family:Verdana,sans-serif;font-size:11.5px">In Japan, avid golfers buy insurance to protect themselves on the course. They purchase it because if they get a hole-in-one, they have to buy gifts and drinks for their friends. The policy covers them for a party worth up to $3,000, for the low price of $65 a year.</p>
+                </div>   
+                <button STYLE="position:relative;top:79.5px;left:14px;background-color:#FF6600;padding:8px;font-family:Verdana,sans-serif;font-size:12px">Buy Individual Plan</button>
+                <button STYLE="position:relative;top:83px;left:14px;background-color:#FF6600;padding:8px;font-family:Verdana,sans-serif;font-size:12px">Buy Family Plan</button>
+            </div>
+        </div>
+    </div>
+    <div class="flip-container" style="margin-left:40px;margin-right:0;margin-top:0;margin-bottom:50px">
+        <div class="card">
+            <div class="front">
+                <div style="display:inline-block">
+                <span><img src="inj.png" style="width:80px;height:80px;position:relative;top:10px;left:14px"></span>
+                <div style="width:100px;height:100px;position:relative;left:90px;bottom:20px">
+                <span STYLE="position:relative;color:#FF6600;;bottom:50px;left:15px;font-family:Verdana,sans-serif;font-size:15px">INDIVIDUAL PERSONAL ACCIDENT</span>
+                </div>
+                </div>
+                <div style="width:180px;height:100px;position:relative;left:14px;bottom:100px">
+                <p style="font-family:Verdana,sans-serif;font-size:13px">Secure yourself against unforeseen incidents with our Personal Accident Policies.</p>
+                </div>     
+            </div>
+            <div class="back">
+                <div style="width:180px;height:100px;position:relative;left:14px;top:2px">
+                <p style="font-family:Verdana,sans-serif;">FUN FACT</p>
+                <p style="font-family:Verdana,sans-serif;font-size:13px"> Netherlands is the only country in the world where it is compulsory for everyone to have private health insurance. Premiums are not based on age or health status, but on income and are on average €100 per month. </p>
+                </div>
+                <button STYLE="position:relative;top:81px;left:14px;background-color:#FF6600;padding:8px;font-family:Verdana,sans-serif;font-size:12px">Know More</button>
+            </div>
+        </div>
+    </div>
+    <div class="flip-container" style="margin-left:40px;margin-right:0;margin-top:0;margin-bottom:50px">
+        <div class="card">
+            <div class="front">
+                <div style="display:inline-block">
+                <span><img src="iconRenew.png" style="width:80px;height:80px;position:relative;top:10px;left:14px"></span>
+                <div style="width:100px;height:100px;position:relative;left:90px;bottom:20px">
+                <span STYLE="position:relative;color:#FF6600;;bottom:50px;left:15px;font-family:Verdana,sans-serif;font-size:15px">RENEW HEALTH INSURANCE</span>
+                </div>
+                </div>
+                <div style="width:180px;height:100px;position:relative;left:14px;bottom:100px">
+                <p style="font-family:Verdana,sans-serif;font-size:13px">Renew your policy online in four easy steps. Use our secure payment gateway and follow the steps for renewal.</p>
+                </div> 
+            </div>
+            <div class="back">
+                <div style="width:180px;height:100px;position:relative;left:14px;top:2px">
+                <p style="font-family:Verdana,sans-serif;">FUN FACT</p>
+                <p style="font-family:Verdana,sans-serif;font-size:11px">In London from 1682 one could buy fire insurance. A metal plate was attached to their building ensuring that if there was ever a fire their insurance company would fight to extinguish it. If the building wasn’t insured the fire wasn’t put out unless it threatened to spread to an insured building.</p>
+                </div>
+                <button STYLE="position:relative;top:79.5px;left:14px;background-color:#FF6600;padding:8px;font-family:Verdana,sans-serif;font-size:12px">Know More</button>
+            </div>
+        </div>
+    </div>
+    <div style="width:500px;height:160px;position:relative;left:130px;border-left:1.5px solid #FF6600;">
+    <p style="font-family:Verdana,sans-serif;font-size:18px;position:relative;left:5px;">Why choose <span style="color:#FF6600">Our Health Insurance ?</span></p>
+    <p style="font-family:Verdana,sans-serif;font-size:13px;position:relative;left:5px;">Apollo Hospitals Group, Asia's largest healthcare provider and Munich Health, world leaders in Health Insurance, have come together to make quality healthcare easy and accessible for every individual. Using simple language, clear policies, transparent procedures and innovative products, Apollo Munich makes health insurance simple and uncomplicated for all.</p>
+    <a STYLE="position:relative;font-family:Verdana,sans-serif;font-size:12px;cursor:pointer;position:relative;left:5px;color:#FF6600">Know More</a>
+    </div>
+    <div style="width:225px;height:190px;position:relative;left:685px;bottom:182px;border-left:1.5px solid #FF6600;">
+    <p style="font-family:Verdana,sans-serif;font-size:18px;position:relative;left:5px;">Claim <span style="color:#FF6600">Process</span></p>
+    <p style="font-family:Verdana,sans-serif;font-size:13px;position:relative;left:5px;">We are in the business to pay claims and the only process that we follow is paying every genuine claim. Our claims team is trained to process all medical insurance claims compassionately, yet professionally. </p>
+    <a STYLE="position:relative;font-family:Verdana,sans-serif;font-size:12px;cursor:pointer;position:relative;left:5px;color:#FF6600">Know More</a>
+    </div>
+    <div style="width:225px;height:220px;position:relative;left:975px;bottom:395px;border-left:1.5px solid #FF6600;">
+    <p style="font-family:Verdana,sans-serif;font-size:18px;position:relative;left:9px;">Quick <span style="color:#FF6600">Links</span></p>
+    <a STYLE="position:relative;font-family:Verdana,sans-serif;font-size:12px;cursor:pointer;position:relative;left:10px;color:#FF6600">Be An Agent</a><br>
+    <a STYLE="position:relative;font-family:Verdana,sans-serif;font-size:12px;cursor:pointer;position:relative;left:10px;color:#FF6600">Health Insurance Calculator</a><br>
+    <a STYLE="position:relative;font-family:Verdana,sans-serif;font-size:12px;cursor:pointer;position:relative;left:10px;color:#FF6600">Travel Insurance Calculator</a><br>
+    <a STYLE="position:relative;font-family:Verdana,sans-serif;font-size:12px;cursor:pointer;position:relative;left:10px;color:#FF6600">Personal Accident Calculator</a><br>
+    <a STYLE="position:relative;font-family:Verdana,sans-serif;font-size:12px;cursor:pointer;position:relative;left:10px;color:#FF6600">Cashless Hospital List</a><br>
+    <a STYLE="position:relative;font-family:Verdana,sans-serif;font-size:12px;cursor:pointer;position:relative;left:10px;color:#FF6600">Download Forms</a><br>
+    <a STYLE="position:relative;font-family:Verdana,sans-serif;font-size:12px;cursor:pointer;position:relative;left:10px;color:#FF6600">Update Contact Details</a><br>
+    <a STYLE="position:relative;font-family:Verdana,sans-serif;font-size:12px;cursor:pointer;position:relative;left:10px;color:#FF6600">Health Insurance</a><br>
+    <a STYLE="position:relative;font-family:Verdana,sans-serif;font-size:12px;cursor:pointer;position:relative;left:10px;color:#FF6600">Customer Portal</a>
+    </div>
+    <div style="position:relative;bottom:350px;background-color:lightgrey;width:100%;height:400px;color:white">
+    </div>
+     <div style="position:relative;bottom:350px;background-color:lightgrey;width:100%;height:300px;color:white;">
+      <div style="position:relative;left:490px;">
+          <a href="www.facebook.com" class="fa fa-facebook"style="color:black;position:relative;bottom:20px;"></a>
+          <a href="#" class="fa fa-twitter"style="color:black;position:relative;bottom:20px;"></a>
+          <a href="#" class="fa fa-google"style="color:black;position:relative;bottom:20px;"></a>
+          <a href="#" class="fa fa-linkedin"style="color:black;position:relative;bottom:20px;"></a>
+          <a href="#" class="fa fa-youtube"style="color:black;position:relative;bottom:20px;"></a>
+          <a><img src="bron.png" style="width:60px;height:60px"></a>
+      </div>
+      <div style="position:relative;left:100px;font-family:Arial">
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspHealth Insurance Articles&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspSitemap&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspPublic Disclosures&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspTerms and Conditions&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspContact&nbspUs&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspAbout Apollo Hospitals Group&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspPortability&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspApollo<br> Hospitals&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspApollolife&nbsp</a>          
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspIRDA&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspIRDA Customer Education Portal&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspMunich Health&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspApollo Edoc&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspCareers&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbsp Blog&nbsp</a>          
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspStay Healthy&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspApollo Pharmacy&nbsp</a>
+          <a style="color:grey;position:relative;border-right:1px solid grey;">&nbspGST&nbsp</a>
+      </div><br>
+      <div style="text-align:center;color:black;width:850px;height:100px;position:relative;left:260px;font-family:Arial">
+        AN ISO 9001:2008 CERTIFIED HEALTH INSURANCE COMPANY<br>
+For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale. Tax benefits are subject to changes in tax laws.
+Insurance is the subject matter of the solicitation. Reg. No. 131 Corporate Identity Number - U66030TG2006PLC051760.
+Best viewed with IE 9+, Firefox 18.0+, Chrome 3.0+, Safari 4.0+<br><br>
+<img src="visa.jpg">&nbsp&nbsp&nbsp<img src="master.jpg">&nbsp&nbsp&nbsp<img src="amrexp.jpg">
+      </div>
+
+    
+    </div>
+    <button onclick="topFunction()" id="myBtn1" >top</button>       
+</body>
+       
+</body>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn1").style.display = "block";
+    } else {
+        document.getElementById("myBtn1").style.display = "none";
+    }
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "320px";
+    document.getElementById("mySidenav").style.transition="1s"
+    //document.getElementById("mySidenav").style.display="block";
+
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").style.transition="1s"
+}
+var slideIn = 1;
+showSli(slideIn);
+function plusSli(n) {
+  showSli(slideIn += n);
+}
+
+function currentSli(n) {
+  showSli(slideIn = n);
+}
+
+function showSli(n) {
+  var i;
+  var slides = document.getElementsByClassName("Slimy");
+  if (n > slides.length) {slideIn = 1}    
+  if (n < 1) {slideIn = slides.length} ;
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+  }
+  slides[slideIn-1].style.display = "block";  
+}
+
+
+</script>
+</html>

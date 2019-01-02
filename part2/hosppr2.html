@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    @font-face{
+        font-family: nikoleta;
+        src:url(NIKOLETA.ttf);
+      }
+      .ap{
+        position: relative;
+        left: -150px;
+        top:50px;
+      }
+      .t{
+        width: 19px;
+        height: 19px;
+      }
+      #lif{
+        background-color:lightgrey ;padding:15px;
+      }
+      #sh
+      {
+        background-color: white;
+        width: 1800px;
+        height: 140px;
+        position: relative;
+        left: 290px;
+        margin-top:0;
+        border-left: 2px ;
+      }
+      input[type=text]#myInp {
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 12px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width .4s ease-in-out;
+    transition: width .4s ease-in-out;
+}
+
+input[type=text]#myInp:focus {
+    width: 20%;
+}
+      input[type=text]#myInp1 {
+    width: 100px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 12px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width .4s ease-in-out;
+    transition: width .4s ease-in-out;
+}
+
+input[type=text]#myInp1:focus {
+    width: 90%;
+}
+option{
+  background-color: white;
+  border-bottom: 1px solid #6699ff;
+}
+div.t1{
+  margin: 0;
+  background-color: #FFCC00 ;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px;
+  width:20px;
+  border:1px solid #000000;
+  word-break:break-all;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+
+}
+div.t2{
+  margin: 0;
+  background-color: #FFCC00 ;
+  font-family: Arial;
+  font-weight: bold;
+  position: fixed;
+  font-size: 20px;
+  padding: 5px;
+  width:22px;
+  border:1px solid #000000;
+  word-break:break-all;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+
+}
+.sidenav {
+    height: 43%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 184px;
+    left: 0;
+    display: none;
+
+    background-color: lightgrey;
+    overflow-x: hidden;
+    padding-top: 40px;
+    padding-left: 20px;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+}    
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+    cursor: pointer;
+}
+ul{
+  background-color: #6699ff;
+  padding-left: 90px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+li{
+  display: inline;
+}
+.dropbtn{
+    display: inline-block;
+    color: #003366;
+    padding: 6px;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+li img{
+  
+    color: #003366;
+    padding-right: 20px;
+    cursor: pointer;  
+}
+
+li a{
+  display: inline-block;
+    color: #003366;
+    text-indent: 20px;
+    padding: 6px 8px;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+li a:hover {
+    background-color: #003366;
+    color: white;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+}
+
+
+.dropdown-content a {
+    color: #003366;
+    padding-left: 1px ;
+    padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  font-family: Arial;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #6699ff;
+   
+ }
+ .dropdown-content a:hover {background-color: #003366;
+      color: white;
+ }
+ .dropdown:hover .dropdown-content {
+    display: block;
+
+}
+ .dropdown:hover .dropbtn {
+    background-color: #003366;
+    color: white;
+
+}
+
+.dropbtn1{
+  color: #003366;
+    padding-left: 1px ;
+
+    padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  font-family: Arial;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid #6699ff;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+    
+    
+}
+.dropdown-contenta {
+    display: none;
+    position: absolute;
+    left: 260px;
+    top:-1px;
+    background-color: #f9f9f9;
+    min-width: 230px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+}
+
+
+.dropdown-contenta a {
+    color: #003366;
+    padding-left: 1px ;
+    padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 25px;
+  font-family: Arial;
+    text-decoration: none;
+    display: block;
+    /*border-left: 1px solid #6699ff;
+    border-right: 1px solid #6699ff;*/
+    border-bottom: 1px solid #6699ff;
+
+   
+ }
+ 
+ .dropdown-contenta a:hover {background-color: #003366;
+      color: white;
+ }
+ .dropdown1:hover .dropdown-contenta {
+    display: block;
+
+}
+ .dropdown1:hover .dropbtn1 {
+    background-color: #003366;
+    color: white;
+
+}
+.dropdown-contentb {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+}
+.dropdown:hover .dropdown-contentb {
+    display: block;
+
+}
+.dropdown-contentb a {
+    color: #003366;
+    padding-left: 1px ;
+    padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  font-family: Arial;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #6699ff;
+ } 
+
+
+
+
+* {box-sizing:border-box}
+.slideshow-container {
+  max-width: 1200px;
+  position: relative;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: 110px;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top:85%;
+  width: auto;
+  padding: 8px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 20px;
+}
+
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.a {
+  
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+#i{
+  color: blue;
+  font-family: Verdana;
+  text-align: center;
+}
+
+
+
+.tooltip {
+    position: absolute;
+    top:0;
+    top:102%;
+    left:100px;
+    display: inline-block;
+    font-family:'Lato',sans-serif;
+    cursor: pointer;   
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color:white;
+    border: 1px solid grey ;
+    color:black;
+    height:350px;
+    width:1100px;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 4%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.tooltip .tooltiptext1  {
+    visibility: hidden;
+    background-color:white;
+    border: 1px solid grey ;
+    color:black;
+    height:350px;
+    width:1100px;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext1::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 4%;
+    margin-left: 92px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext1 {
+    visibility: visible;
+    opacity: 1;
+}
+ 
+.slideshow-box {
+  max-width: 1500px;
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+}
+
+
+.bef, .aft {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+
+.aft {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.bef:hover, .aft:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+.dotted {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.act2, .dotted:hover {
+  background-color: #717171;
+}
+#i{
+  color: blue;
+  font-family: Verdana;
+  text-align: center;
+}
+
+.icon-bar {
+          width: 100%;
+          text-align: center;
+          background-color:  #3399CC;
+          overflow: auto;
+      }
+
+.icon-bar a {
+          width: 10%;
+          padding-top: 21px;
+          padding-bottom: 23.9px;
+          padding-left: 5px;
+          padding-right: 5px;
+          float: left;
+          transition: all 0.3s ease;
+          color: white;
+          font-size: 11.5px;
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
+          font-family: Arial;
+
+      }
+.icon-bar span {
+          width: 20%;
+          padding-top: 16px;
+          padding-bottom: 17.5px;
+          padding-left: 16px;
+          padding-right: 5px;
+          float: left;
+          color: white;
+          text-indent: 120px;
+          font-size: 20px;
+          box-shadow: 2px 0px 2px rgba(0, 0, 0, .5);
+          font-family: Arial;
+
+      }
+.icon-bar a:hover {
+          background-color: #000;
+          text-transform: italic;
+      }
+.alert {
+    padding: 10px;
+    background-color: lightgrey; 
+    color: black;
+    margin-bottom: 9px;
+    
+}
+.closebtn1 {
+    margin-left: 15px;
+    font-family: Arial;
+    color: black;
+    padding-top: 5px;
+    padding-right: 7.5px;
+    padding-left: 7.5px;
+    padding-bottom:7px;
+    /*font-weight: bold;*/
+    float: right;
+    font-size:12px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.closebtn1:hover {
+    color: white;
+}
+.fa {
+  padding: 15px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.column1 {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media (max-width: 650px) {
+  .column1 {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container2 {
+  padding: 0 16px;
+}
+
+.container2::after, .row1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title1 {
+  color: grey;
+}
+
+.button2 {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button2:hover {
+  background-color: #555;
+}
+#myBtn1 {
+  display: none;
+  position: fixed;
+  bottom: 120px;
+  left: 130px;
+  z-index: 99;  
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 11px;
+  border-radius: 190px;
+  opacity:0.5;
+}
+
+#myBtn1:hover {
+  background-color: #555;
+}
+@media (max-width: 500px) {
+  span .em img{
+    src="txt-emergency2.gif";
+  }
+
+}
+.hl{
+  text-decoration: none;
+}
+.hl:hover{
+  text-decoration: underline;
+}
+    </style>
+
+  </head>
+  <body>
+    
+   <div id="sh">
+<span style="position:relative;left:-270px;bottom:40px;font-family:Arial;font-size:25px">
+        FRANKLIN HOSPITALS AND
+      </span>
+      <span style="position:relative;left:-605px;bottom:10px;font-family:Arial;font-size:25px">
+        HEALTHCARE MANAGEMENT SYSTEM
+      </span>
+      <span style="position:relative;left:-445px;bottom:40px;"><img src="images.png" class="ap" style="width:70px;height:80px"></span>
+      <span id="lif" style="position:relative;bottom:40px;left:-560px;">OUR LIFELINE&nbsp&nbsp<img class="t" src="tel.png" >&nbsp&nbsp NATIONAL :1860-500-1066
+      <span class="loc" style="position:relative;left:20px;"><select style="padding:13px;background-color:#3399FF">
+        <option selected>SELECT LOCATION</option>
+        <option>Ahmedabad</option>
+        <option>Bengaluru</option>
+        <option>Mumbai</option>
+        <option>Chennai</option>
+        <option>Delhi</option>
+        <option>Kolkata</option>
+        <option>Hyderabad</option>
+        <option>Mysore</option>
+        <option>Bhubaneshwar</option>
+        <option>Guwahati</option>
+        <option>Indore</option>
+        <option>Nashik</option>
+        <option>Pune</option>
+        <option>Nellore</option>
+        <option>Trichy</option>
+        <option>Thirumallai</option>
+        <option>Vishakhapatnam</option>
+      </select>
+    </span>
+    </span>
+    <span class="em" style="position:relative;bottom:40px;left:-540px;bottom:26px;"><img src="txt-emergency.png"></span><br><br>
+    <span style="position:relative;left:313px;bottom:40px;" ><form method="GET" action="23.html"><input id="myInp" type="text" name="search" placeholder="Hospital Locations,Clinics,Pharmacies... "></form></span>
+    <div style="position:relative;left:680px;bottom:97px">
+        <a href="www.facebook.com" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+    </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a  class="closebtn" onclick="closeNav()">&times;</a>
+      
+      <form>
+        <input type="text" style="width:85%;padding-top:8px;padding-bottom:8px;border-radius: 5px;left:50px" placeholder="First Name* "><br><br>
+        <input type="text" style="width:85%;padding-top:8px;border-radius:5px;padding-bottom:8px" placeholder="Last Name* "><br><br>
+        <input type="text" style="width:85%;padding-top:8px;padding-bottom:8px;border-radius: 5px;" placeholder="Email Address* "><br><br>
+        <input type="text" style="width:85%;padding-top:8px;padding-bottom:8px;border-radius: 5px;" placeholder="Phone Number* "><br><br>
+        <select style="padding:8px;background-color:white">
+        <option selected>SELECT LOCATION</option>
+        <option>Ahmedabad</option>
+        <option>Bengaluru</option>
+        <option>Mumbai</option>
+        <option>Chennai</option>
+        <option>Delhi</option>
+        <option>Kolkata</option>
+        <option>Hyderabad</option>
+        <option>Mysore</option>
+        <option>Bhubaneshwar</option>
+        <option>Guwahati</option>
+        <option>Indore</option>
+        <option>Nashik</option>
+        <option>Pune</option>
+        <option>Nellore</option>
+        <option>Trichy</option>
+        <option>Thirumallai</option>
+        <option>Vishakhapatnam</option>
+        </select><br><br>
+      
+      <input type="text" style="width:85%;padding-top:8px;padding-bottom:8px;border-radius: 5px;" placeholder="Health Concern "><br><br>
+      <textarea rows="5px" cols="25px" placeholder="Message"></textarea><br><br>
+      <input type="submit" style="width:100%;margin:0;padding-top:8px;padding-bottom:8px;border-radius: 5px;color:white;font-family:Arial;background-color:#0033CC" value="SUBMIT">
+      </form>
+    </div>
+    <div class="t2" onclick="closeNav()" id="main" style="margin-left:10px">GET   IN   TOUCH<img src="get2.png" style="width:22px;height:22px;"></div>
+    <div class="t2" onclick="openNav()" style="margin-left:10px">GET   IN   TOUCH<img src="get2.png" style="width:22px;height:22px;"></div>
+    <ul>
+      <li><input type="image" src="hom.png" style="width:15px;height:15px" onclick="fyi()"></li>&nbsp&nbsp&nbsp&nbsp
+      <li ><div class="dropdown"><span class="dropbtn"><b>PATIENT CARE</b></span>
+      <div class="dropdown-content">
+          <a href="#">Find A Doctor</a>
+          <div class="dropdown1"><span class="dropbtn1"style="text-indent:20px">Clinical Quality and Outcomes&nbsp&nbsp&nbsp&nbsp&gt</span>
+          <div class="dropdown-contenta">
+            <a href="#" style="border-top:1px solid #6699ff;">Measuring Outcomes</a>
+            <a href="#">Accreditions</a>
+            <a href="#">Patient Safety</a>
+            <a href="#">Infection Control</a> 
+            <a href="#">TASCC</a>
+            <a href="#">IT Excellence</a>
+          </div>
+          
+          </div>
+          
+          
+          <a href="#">Service Excellence</a>
+          <a href="#">Patient Information Guide</a>
+          <a href="#">Patient Speak Videos</a>
+          <a href="#">Patient Messages</a>
+          <a href="#">Value Added Services</a>
+          <a href="#">Health Services</a>
+          <a href="#">Pay Online</a>
+        </div>
+      </div>
+      </li>
+      <li class="sec"><div class="dropdown"><span class="dropbtn"><b>CENTRES OF EXCELLENCE</b></span>
+      <div class="dropdown-content">
+        <div class="dropdown1"><span class="dropbtn1" style="text-indent:20px">Heart&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&gt</span>
+          <div class="dropdown-contenta">
+            <a href="#" style="border-top:1px solid #6699ff;">Healthy Heart Programs</a>
+            <a href="#">Milestones</a>
+            <a href="#">Our Stent Prices</a>
+            <a href="#">Treatments</a>  
+            <a href="#">Facilities</a>
+            <a href="#">Diagnostic Services</a>
+            <a>Clinical Team</a>
+            <a>Testimonial Messages</a>
+            <a>Post A Query</a>
+            <a>Clinical Articles</a>
+          </div>
+          </div>
+          <br>
+          <div class="dropdown1"><span class="dropbtn1" style="text-indent:20px">Orthopaedics&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&gt</span>
+          <div class="dropdown-contenta">
+            <a href="#" style="border-top:1px solid #6699ff;">Milestones</a>
+            <a href="#">Our Implant Pricing</a>
+            <a href="#">Treatments</a>
+            <a href="#">Clinical Team</a> 
+            <a href="#">Bone &amp Joint Health</a>
+            <a href="#">Diagnostic Services</a>
+            <a>Key Surgeries</a>
+            <a>Testimonial Messages</a>
+            <a>Post A Query</a>
+            <a>Clinical Articles</a>
+          </div>
+          </div>
+          <br>
+          <div class="dropdown1"><span class="dropbtn1" style="text-indent:20px">Spine&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&gt</span>
+          <div class="dropdown-contenta">
+            <a href="#" style="border-top:1px solid #6699ff;">Milestones</a>
+            <a href="#">Treatments</a>
+            <a href="#">Clinical Team</a> 
+            <a href="#">Common Spine Diseases</a>
+            <a href="#">Common Spine Surgeries</a>
+            <a>Clinical Articles</a>
+            <a>Testimonial Videos</a>
+            <a>Testimonial Messages</a>
+            <a>Post A Query</a>
+            <a href="#">Diseases and Conditions</a>
+          </div>
+          </div>
+        </div>
+      </div>
+        <li ><div class="dropdown"><span class="dropbtn"><b>PROCEDURES</b></span>
+      <div class="dropdown-content">  
+        <a href="#">Service Excellence</a>
+          <a href="#">Patient Information Guide</a>
+          <a href="#">Patient Speak Videos</a>
+          <a href="#">Patient Messages</a>
+          <a href="#">Value Added Services</a>
+          <a href="#">Health Services</a>
+          <a href="#">Pay Online</a>
+        </div>
+        </div>
+        <li style="font-weight:bold;color: #003366;padding: 6px;text-decoration: none;font-family: 'Lato', sans-serif;font-size: 16px;cursor: pointer;">INTERNATIONAL PATIENTS</li>
+        <li ><div class="dropdown"><span class="dropbtn"><b>CORPORATE</b></span>
+      <div class="dropdown-content">  
+        <a href="#">Service Excellence</a>
+          <a href="#">Patient Information Guide</a>
+          <a href="#">Patient Speak Videos</a>
+          <a href="#">Patient Messages</a>
+          <a href="#">Value Added Services</a>
+          <a href="#">Health Services</a>
+          <a href="#">Pay Online</a>
+        </div>
+        </div>
+        <li ><div class="dropdown"><span class="dropbtn"><b>EDUCATION</b></span>
+      <div class="dropdown-content">  
+        <a href="#">Service Excellence</a>
+          <a href="#">Patient Information Guide</a>
+          <a href="#">Patient Speak Videos</a>
+          <a href="#">Patient Messages</a>
+          <a href="#">Value Added Services</a>
+          <a href="#">Health Services</a>
+          <a href="#">Pay Online</a>
+        </div>
+        </div>
+        <li ><div class="dropdown"><span class="dropbtn"><b>RESEARCH</b></span>
+      <div class="dropdown-content">  
+        <a href="#">Service Excellence</a>
+          <a href="#">Patient Information Guide</a>
+          <a href="#">Patient Speak Videos</a>
+          <a href="#">Patient Messages</a>
+          <a href="#">Value Added Services</a>
+          <a href="#">Health Services</a>
+          <a href="#">Pay Online</a>
+        </div>
+        </div>
+        <li ><div class="dropdown"><span class="dropbtn" onclick="fcu()" ><b>CONTACT US</b></span>
+      <div class="dropdown-content">  
+        <a href="#">Service Excellence</a>
+          <a href="#">Patient Information Guide</a>
+          <a href="#">Patient Speak Videos</a>
+          <a href="#">Patient Messages</a>
+          <a href="#">Value Added Services</a>
+          <a href="#">Health Services</a>
+          <a href="#">Pay Online</a>
+        </div>
+        </div>
+    </ul>
+    <div id="slide" style=";margin:0;width:1333px;height:520px;padding-top:5px;background-image:url(bl1.jpg);background-repeat:no-repeat;background-size:cover">
+    <div class="slideshow-container"  >
+
+      <div class="mySlides" style="display:inline;background-image:url(giv.jpg);background-repeat:no-repeat;background-size:cover">
+        
+        <span><img src="ham.png" style="width:280px;height:280px;position:relative;left:100px"></span><span style="font-family:'Lato',sans-serif;font-size:30px;position:relative;left:200px;bottom:200px">Revised Pricing on Coronary Stents</span><br><br>
+        <button onclick="stent()" style="background-color=#0033CC;padding:6px 10px;position:relative;left:480px;bottom:200px">View More</button>
+
+      </div>
+      <div class="mySlides" style="background-color:rgba(0,0,0,0.8)">
+        <img src="mm2.png" style="width:99.8%;height:120%">
+      </div>
+      <!--<div class="mySlides" style="background-color:rgba(0,0,0,0.8)">
+        <img src="mm3.png" style="width:99.8%;height:120%">
+      </div>-->
+      <div class="mySlides" style="background-color:rgba(0,0,0,0.8)">
+        <img src="mm4.png" style="width:99.8%;height:120%">
+      </div>
+      <!--<div class="mySlides" style="background-color:rgba(0,0,0,0.8)">
+        <img src="mm5.png" style="width:99.8%;height:120%">
+      </div>-->
+      <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+      <div style="text-align:center">
+        <a class="prev" onclick="plusSlides(-1)"> < </a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a class="next" onclick="plusSlides(1)"> > </a>
+        <br>
+        <div style="width:44%;position:absolute;top:0;top:89%;right:55.5%"><hr></div><span style="font-family:'Lato',sans-serif;font-size:15px;color:blue;position:absolute;top:0;top:89%;right:43%">Explore Oppurtunities</span><div style="width:41.5%;position:absolute;top:0;top:89%;left:57.8%"><hr></div>
+      </div>
+    </div>
+<div class="tooltip" onmouseover="f1()" onmouseout="f1o()"><img id="neu" src="hom2.png" style="width:25px;height:25px;position:relative;left:10px"><br><a id="neu1">Clinics</a>
+        <div class="tooltiptext">
+          <h2 style="font-family:nikoleta;margin-left:10px">Apollo Clinics</h2>
+          <p style="font-family:nikoleta;margin-left:10px">Apollo Cinics extend its reach providing world class healthcare wherever you<br> are</p>
+          <span style="position:relative;left:580px;bottom:149px"><img src="s0.png" style="width:520px;height:348px"></span>
+        </div>
+    </div>
+        <div class="tooltip" style="left:180px"onmouseover="f2()" onmouseout="f2o()"><img id="str" src="star1.png" style="width:25px;height:25px;position:relative;left:52px"><br><a id="str1">Specialty Hospitals</a>
+            <div class="tooltiptext1" style="margin-left:-145px;">
+                <h2 style="font-family:'Lato',sans-serif">Specialty Hospitals</h2>
+                <p style="font-family:'Lato',sans-serif">Apollo Specialty Hospitals, India, provide world class services for all medical<br> super specialties.</p>
+                <span style="position:relative;left:577px;bottom:124px"><img src="s2.png" style="width:520px;height:347.5px"></span>
+            </div>
+        </div>
+        <div class="tooltip" style="left:340px"onmouseover="f3()" onmouseout="f3o()"><img id="ph" src="med.png" style="width:25px;height:25px;position:relative;left:60px"><br><a id="ph1">Pharmacy Directory</a>
+        </div>
+        <div class="tooltip" style="left:530px"onmouseover="f4()" onmouseout="f4o()"><img id="hp" src="hph.png" style="width:25px;height:25px;position:relative;left:8px"><br><a id="hp1">Ask Us</a>
+            <div class="tooltiptext"style="margin-left:-450px;">
+                <img src="ask.png">
+                <p style="font-family:'Lato',sans-serif">We value your time and understand that you want the best of Apollo - but at your<br> convenience. Choose from a variety of online services to help you stay on top of<br> your health.</p>
+                 <span style="position:relative;left:577px;bottom:152.5px"><img src="s3.png" style="width:520px;height:348px"></span>
+            </div>
+        </div>
+        <div class="tooltip" style="left:640px"onmouseover="f5()" onmouseout="f5o()"><img id="pl" src="pln1.png" style="width:25px;height:25px;position:relative;left:30px"><br><a id="pl1">Treatment in India</a>
+            
+        </div>
+        <div class="tooltip" style="left:800px"onmouseover="f6()" onmouseout="f6o()"><img id="ed" src="br.png" style="width:25px;height:25px;position:relative;left:50px"><br><a id="ed1">Education &amp Research</a>
+            <div class="tooltiptext" style="margin-left:-800px;">
+                <h2 style="font-family:'Lato',sans-serif">Apollo Education & Research</h2>
+                <p style="font-family:'Lato',sans-serif">At Apollo, we pride ourselves in sharing knowledge to foster the next generation<br>  of medical excellence.</p>
+                <span style="position:relative;left:577px;bottom:125.5px"><img src="s4.png" style="width:520px;height:347px"></span>
+            </div>
+        </div>
+        <div class="tooltip" style="left:990px"onmouseover="f7()" onmouseout="f7o()"><img id="hlt" src="hlt.png" style="width:25px;height:25px;position:relative;left:50px"><br><a id="hlt1"class="hl" href="htlth1.html">Health Insurance</a>
+        </div>
+        <div class="tooltip" style="left:1150px"onmouseover="f8()" onmouseout="f8o()"><img id="w" src="app.jpg" style="width:25px;height:25px;position:relative;left:20px"><br><a id="w1">Wellness</a>
+            <div class="tooltiptext" style="margin-left:-1080px;">
+                <h2 style="font-family:'Lato',sans-serif">Apollo Education & Research</h2>
+                <p style="font-family:'Lato',sans-serif">At Apollo, we pride ourselves in sharing knowledge to foster the next generation of medical excellence.</p>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="icon-bar ">
+        <span style="text-decoration:none">I'm Here To</span>
+        <a href="#" style="text-decoration:none">Locate a hospital</a> 
+        <a href="#" style="text-decoration:none">Find a doctor</a> 
+        <a style="text-decoration:none" href="#">Book a Health Check</a> 
+        <a style="text-decoration:none" href="#">Avail Apollo Home</a>
+        <a style="text-decoration:none" href="#">Refer a patient</a> 
+        <a style="text-decoration:none" href="#">Explore our specialties</a> 
+        <a style="text-decoration:none" href="#">Pay onlineMore...</a> 
+      </div>
+    <div style="font-family: nikoleta" >
+  
+      <h2 id="i" style="font-family: nikoleta">Centers of Excellence</h2>
+      <p align="center" >Combining the best specialists and equipment to <br>provide you nothing short of the best in healthcare</p>
+      <div class="slideshow-box" >
+        <div class="Slimy" >
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <a >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="neurosciences(1).png" onmouseover="change3()" onmouseout="changeb3()" id="ne"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <a ><img src="spine(1).png" onmouseover="change4()" onmouseout="changeb4()" id="spn"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <a><img src="transplants(1).png" onmouseover="change5()" onmouseout="changeb5()" id="trv"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a ><img src="preventive-medicine(1).png" onmouseover="change0()" onmouseout="changeb0()" id="dia"></a>&nbsp&nbsp&nbsp&nbsp&nbsp<a  href="proj.html"><img src="heart(1).png" onmouseover="change1()" onmouseout="changeb1()" id="hrt"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a ><img src="orthopaedics(2).png" onmouseover="change2()" onmouseout="changeb2()" id="ort"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a><img src="cc1.png" onclick="f6()"  onmouseover="change6()" onmouseout="changeb6()" id="cc"></a><br>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a  style="text-indent:-100px"><i onmouseover="change3()" onmouseout="changeb3()" id="ne1">Neurosciences</i></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a><i style="text-indent:450px" onmouseover="change4()" onmouseout="changeb4()" id="spn1">Spine</i></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a><i style="text-indent:600px" onmouseover="change5()" onmouseout="changeb5()" id="trv1">Transplants</i></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id="dia1"><i style="text-indent:790px">Preventive Diseases</i></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <a id="hrt1"><i style="text-indent:940px" >Heart</i></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id="ort1"><i style="text-indent:1110px">Orthopaedics</i></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i style="text-indent:1310px" onclick="f6()" onmouseover="change6()" onmouseout="changeb6()" id="cc1">Cancer-care</i>
+        </div>
+
+        <a class="bef" onclick="plusSli(-1)"> < </a>
+        <a class="aft" onclick="plusSli(1)"> > </a>
+
+        </div>
+        <br>
+
+       
+    </div>
+    <br><br>
+    <div style="background-color:#FFCC33;position:fixed;right:0;bottom:0;border-radius:3px"class="closebtn1" onclick="openmy()">BOOK AN APPOINTEMENT</div>
+        <div  style="background-color:green;width:25%;height:38%;position:fixed;right:0px;bottom:0px;" id="myTopNav">
+      <div style="background-color:#FFCC33"class="closebtn1" onclick="closemy()">&nbsp&nbsp&nbspHIDE &nbspX&nbsp&nbsp</div> <br><br>
+      <div class="alert" style="border-width:10px; 
+        border-color: black;">
+      
+        <a id="r" onmouseover="fne()" onmouseout="fno()" style="cursor:pointer"><input type="radio" name="radio" onclick="fn()" >BOOK PHYSICAL APPOINTEMENT</a>
+        <hr>
+        <a id="r1" style="cursor:pointer" onmouseover="fne1()" onmouseout="fno1()"><input type="radio"  name="radio"  onclick="fn1()">CONSULT A DOCTOR</a>
+      </div>
+        <select style="width:89%;margin-left:5px;padding:13px;background-color:#3399FF">
+          <option selected>SELECT LOCATION</option>
+          <option>Ahmedabad</option>
+          <option>Bengaluru</option>
+          <option>Mumbai</option>
+          <option>Chennai</option>
+          <option>Delhi</option>
+          <option>Kolkata</option>
+          <option>Hyderabad</option>
+          <option>Mysore</option>
+          <option>Bhubaneshwar</option>
+          <option>Guwahati</option>
+          <option>Indore</option>
+          <option>Nashik</option>
+          <option>Pune</option>
+          <option>Nellore</option>
+          <option>Trichy</option>
+          <option>Thirumallai</option>
+          <option>Vishakhapatnam</option>
+        </select><br><br>
+          <form method="GET" action="23.html"><input id="myInp1"style="margin-left:10px"type="text" name="search" placeholder="Hospital Locations,Clinics,Pharmacies... "></form>
+    </div>
+    <div style="border:1.5px solid grey;padding:20px">
+<div class="row1">
+  <div class="column1">
+    <div class="card1">
+      <img src="team5.jpg" alt="Jane" style="width:100%;height:310px">
+      <div class="container2">
+        <h2>Emma Schumacer</h2>
+        <p class="title1">Chief Surgeon</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>BelikeJane@gmail.com</p>
+        <p><button class="button2" id="funct2" onmouseover="funct2()" onmouseout="functo2()">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column1">
+    <div class="card1">
+      <img src="team6.png" alt="Mike" style="width:100%;height:310px">
+      <div class="container2">
+        <h2>Brad </h2>
+        <p class="title1">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Ross75@gmail.com</p>
+        <p><button class="button2" id="funct1" onmouseover="funct1()" onmouseout="functo1()">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column1">
+    <div class="card1">
+      <img src="t8.jpg" alt="John" style="width:100%;height:310px">
+      <div class="container2">
+        <h2>Matthew Scumacer</h2>
+        <p class="title1">Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>JohnDoe@gmail.com</p>
+        <p><button id="funct" class="button2" onmouseover="funct()" onmouseout="functo()">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<button onclick="topFunction()" id="myBtn1" title="Go to top">top</button>
+    <script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "242px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
+    /*document.getElementById("main").style.z-index="0";*/
+    /*document.body.style.backgroundColor = "rgba(0,0,0,0.8)";*/
+    document.getElementById("mySidenav").style.transition="1s"
+    document.getElementById("mySidenav").style.display="block";
+
+}
+
+
+function closeNav() {
+    document.getElementById("main").style.transition="1s"
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "10px";
+    document.getElementById("mySidenav").style.transition="1s"
+    document.body.style.backgroundColor = "white";
+}
+function openmy() {
+    document.getElementById("myTopNav").style.height = "38%";
+    /*document.getElementById("main").style.z-index="0";*/
+    /*document.body.style.backgroundColor = "rgba(0,0,0,0.8)";*/
+    document.getElementById("myTopNav").style.transition="1s"
+
+}
+
+
+function closemy() {
+    document.getElementById("myTopNav").style.height = "0";
+    document.getElementById("myTopNav").style.transition="1s"
+}
+function fn(){
+  window.location.href="hosppr2.html";
+}
+
+
+var slideInd = 1;
+showSlides(slideInd);
+
+function plusSlides(n) {
+  showSlides(slideInd += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideInd = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideInd = slides.length} ;
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].classList.remove("active");
+  }
+  slides[slideInd-1].style.display = "block";  
+  dots[slideInd-1].classList.add("active");
+}
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 3000); 
+}
+function f1(){
+  var h=document.getElementById("neu");
+    h.setAttribute("src","hom3.png");
+    var a=document.getElementById("neu1");
+    a.style.color="yellow";
+    var b=document.getElementById("slide");
+    b.style.backgroundColor="rgba(0,0,0,0.8)";
+    var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+  }
+}
+function f1o(){
+    var h=document.getElementById("neu");
+    h.setAttribute("src","hom2.png");
+    var a=document.getElementById("neu1");
+    a.style.color="black";
+    var b=document.getElementById("slide");
+    b.style.transition="1s";
+    b.style.backgroundColor="rgba(255,255,255,0)";
+}
+function f2(){
+    var h=document.getElementById("str");
+    h.setAttribute("src","star2.png");
+    var a=document.getElementById("str1");
+    a.style.color="yellow";
+    var b=document.getElementById("slide");
+    b.style.backgroundColor="rgba(0,0,0,0.8)";
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+  }
+}
+function f2o(){
+    var h=document.getElementById("str");
+    h.setAttribute("src","star1.png");
+    var a=document.getElementById("str1");
+    a.style.color="black";
+    var b=document.getElementById("slide");
+    b.style.transition="1s";
+    b.style.backgroundColor="rgba(255,255,255,0)";
+}
+function f3(){
+    var h=document.getElementById("ph");
+    h.setAttribute("src","med1.png");
+    var a=document.getElementById("ph1");
+    a.style.color="yellow";
+    var b=document.getElementById("slide");
+    b.style.backgroundColor="rgba(0,0,0,0.8)";
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+  }
+}
+function f3o(){
+    var h=document.getElementById("ph");
+    h.setAttribute("src","med.png");
+    var a=document.getElementById("ph1");
+    a.style.color="black";
+    var b=document.getElementById("slide");
+    b.style.transition="1s";
+    b.style.backgroundColor="rgba(255,255,255,0)";
+}
+function f4(){
+    var h=document.getElementById("hp");
+    h.setAttribute("src","hph1.png");
+    var a=document.getElementById("hp1");
+    a.style.color="yellow";
+    var b=document.getElementById("slide");
+    b.style.backgroundColor="rgba(0,0,0,0.8)";
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+  }
+}
+function f4o(){
+    var h=document.getElementById("hp");
+    h.setAttribute("src","hph.png");
+    var a=document.getElementById("hp1");
+    a.style.color="black";
+    var b=document.getElementById("slide");
+    b.style.transition="1s";
+    b.style.backgroundColor="rgba(255,255,255,0)";
+}
+function f5(){
+    var h=document.getElementById("pl");
+    h.setAttribute("src","pln2.png");
+    var a=document.getElementById("pl1");
+    a.style.color="yellow";
+    var b=document.getElementById("slide");
+    b.style.backgroundColor="rgba(0,0,0,0.8)";
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+  }
+}
+function f5o(){
+    var h=document.getElementById("pl");
+    h.setAttribute("src","pln1.png");
+    var a=document.getElementById("pl1");
+    a.style.color="black";
+    var b=document.getElementById("slide");
+    b.style.transition="1s";
+    b.style.backgroundColor="rgba(255,255,255,0)";
+}
+function f6(){
+    var h=document.getElementById("ed");
+    h.setAttribute("src","br1.png");
+    var a=document.getElementById("ed1");
+    a.style.color="yellow";
+    var b=document.getElementById("slide");
+    b.style.backgroundColor="rgba(0,0,0,0.8)";
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+  }
+}
+function f6o(){
+    var h=document.getElementById("ed");
+    h.setAttribute("src","br.png");
+    var a=document.getElementById("ed1");
+    a.style.color="black";
+    var b=document.getElementById("slide");
+    b.style.transition="1s";
+    b.style.backgroundColor="rgba(255,255,255,0)";
+}
+function f7(){
+    var h=document.getElementById("hlt");
+    h.setAttribute("src","hlt1.png");
+    var a=document.getElementById("hlt1");
+    a.style.color="yellow";
+    var b=document.getElementById("slide");
+    b.style.backgroundColor="rgba(0,0,0,0.8)";
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+  }
+}
+function f7o(){
+    var h=document.getElementById("hlt");
+    h.setAttribute("src","hlt.png");
+    var a=document.getElementById("hlt1");
+    a.style.color="black";
+    var b=document.getElementById("slide");
+    b.style.transition="1s";
+    b.style.backgroundColor="rgba(255,255,255,0)";
+}
+function f8(){
+    var h=document.getElementById("w");
+    h.setAttribute("src","app1.jpg");
+    var a=document.getElementById("w1");
+    a.style.color="yellow";
+    var b=document.getElementById("slide");
+    b.style.backgroundColor="rgba(0,0,0,0.8)";
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+  }
+}
+function f8o(){
+    var h=document.getElementById("w");
+    h.setAttribute("src","app.jpg");
+    var a=document.getElementById("w1");
+    a.style.color="black";
+    var b=document.getElementById("slide");
+    b.style.transition="1s";
+    b.style.backgroundColor="rgba(255,255,255,0)";
+}
+
+
+var slideIn = 1;
+showSli(slideIn);
+
+function plusSli(n) {
+  showSli(slideIn += n);
+}
+
+function currentSli(n) {
+  showSli(slideIn = n);
+}
+
+function showSli(n) {
+  var i;
+  var slides = document.getElementsByClassName("Slimy");
+  var dots = document.getElementsByClassName("dotted");
+  if (n > slides.length) {slideIn = 1}    
+  if (n < 1) {slideIn = slides.length} ;
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].classList.remove("act2");
+  }
+  slides[slideIn-1].style.display = "block";  
+  dots[slideIn-1].classList.add("act2");
+}
+function change0(n){
+  var h=document.getElementById("dia");
+  h.setAttribute("src","preventive-medicine(2).png");
+  var a=document.getElementById("dia1");
+  a.style.color="blue";
+  var slides = document.getElementsByClassName("Slimy");
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+
+}
+}
+function changeb0(n){
+  var h=document.getElementById("dia");
+  h.setAttribute("src","preventive-medicine(1).png");
+  var a=document.getElementById("dia1");
+  a.style.color="black";
+
+
+}
+
+function change1(n){
+  var h=document.getElementById("hrt");
+  h.setAttribute("src","heart(2).png");
+  
+  var a=document.getElementById("hrt1");
+  a.style.color="blue";
+  var slides = document.getElementsByClassName("Slimy");
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+
+}
+
+}
+function changeb1(n){
+  var h=document.getElementById("hrt");
+  h.setAttribute("src","heart(1).png");
+
+  var a=document.getElementById("hrt1");
+  a.style.color="black";
+
+}
+function change2(n){
+  var h=document.getElementById("ort");
+  h.setAttribute("src","orthopaedics(1).png");
+  var a=document.getElementById("ort1");
+  a.style.color="blue";
+  var slides = document.getElementsByClassName("Slimy");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.backgroundColor="white";  
+
+}
+
+}
+function changeb2(n){
+  var h=document.getElementById("ort");
+  h.setAttribute("src","orthopaedics(2).png");
+  var a=document.getElementById("ort1");
+  a.style.color="black";
+}
+
+function change3(n){
+  var h=document.getElementById("ne");
+  h.setAttribute("src","neurosciences(2).png");
+  var a=document.getElementById("ne1");
+  a.style.color="blue";
+  var slides = document.getElementsByClassName("Slimy");
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+
+}
+
+}
+function changeb3(n){
+  var h=document.getElementById("ne");
+  h.setAttribute("src","neurosciences(1).png");
+  var a=document.getElementById("ne1");
+  a.style.color="black";
+
+}
+function change4(n){
+  var h=document.getElementById("spn");
+  h.setAttribute("src","spine(2).png");
+  var a=document.getElementById("spn1");
+  a.style.color="blue";
+  var slides = document.getElementsByClassName("Slimy");
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+
+}
+
+
+}
+function changeb4(n){
+  var h=document.getElementById("spn");
+  h.setAttribute("src","spine(1).png");
+  var a=document.getElementById("spn1");
+  a.style.color="black";
+
+}
+function change5(n){
+  var h=document.getElementById("trv");
+  h.setAttribute("src","transplants(2).png");
+  var a=document.getElementById("trv1");
+  a.style.color="blue";
+  var slides = document.getElementsByClassName("Slimy");
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+
+}
+
+}
+function changeb5(n){
+  var h=document.getElementById("trv");
+  h.setAttribute("src","transplants(1).png");
+  var a=document.getElementById("trv1");
+  a.style.color="black";
+
+}
+function change6(n){
+  var h=document.getElementById("cc");
+  h.setAttribute("src","cc2.png");
+  var a=document.getElementById("cc1");
+  a.style.color="blue";
+  var slides = document.getElementsByClassName("Slimy");
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.backgroundColor="white";  
+
+}
+
+}
+function changeb6(n){
+  var h=document.getElementById("cc");
+  h.setAttribute("src","cc1.png");
+  var a=document.getElementById("cc1");
+  a.style.color="black";
+
+}
+      function fn(e)
+      {
+        var i=document.getElementById("r");
+        i.style.color="blue"
+        window.location.href="proprac.html";
+      }
+      function fne(e)
+      {
+        var i=document.getElementById("r");
+        i.style.color="blue"
+      }
+      function fno(e)
+      {
+        var i=document.getElementById("r");
+        i.style.color="black"
+      }
+      function fne1(e)
+      {
+        var i=document.getElementById("r1");
+        i.style.color="blue"
+      }
+      function fno1(e)
+      {
+        var i=document.getElementById("r1");
+        i.style.color="black"
+      }
+      function fn1(e)
+      {
+        var i=document.getElementById("r1");
+        i.style.color="blue"
+        window.location.href="proj.html";
+      }
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn1").style.display = "block";
+    } else {
+        document.getElementById("myBtn1").style.display = "none";
+    }
+}
+
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+function funct(){
+  var a=document.getElementById("funct");
+  a.style.opacity="0.6";
+  a.innerHTML="+911";
+}
+function functo(){
+  var a=document.getElementById("funct");
+  a.style.opacity="1";
+  a.innerHTML="Contact";
+}
+function funct1(){
+  var a=document.getElementById("funct1");
+  a.style.opacity="0.6";
+  a.innerHTML="+101";
+}
+function functo1(){
+  var a=document.getElementById("funct1");
+  a.style.opacity="1";
+  a.innerHTML="Contact";
+}
+function funct2(){
+  var a=document.getElementById("funct2");
+  a.style.opacity="0.6";
+  a.innerHTML="+100";
+}
+function functo2(){
+  var a=document.getElementById("funct2");
+  a.style.opacity="1";
+  a.innerHTML="Contact";
+}
+function stent(){
+  window.location.href="stent.html";
+}
+function f6(){
+ window.location.href="proton.html"; 
+}
+function fcu(){
+ window.location.href="contact.html"; 
+}
+function fyi(){
+ window.location.href="hosppr2.html"; 
+}
+    </script>
+  </body>

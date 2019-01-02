@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+				<div id="third" style="background-color:red;width:90px;height:90px" onclick="fn()">
+					A sad guy
+				</div>
+			
+		
+		<script>
+			function fn(){
+			var a=document.getElementById("third");
+			a.style.backgroundColor="blue";
+			a.textContent="A happy guy";
+			}
+			var b=document.getElementById("third");
+			b.onclick=fn2;
+			/*b.addEventListener("click","fn2()",false);*/
+			function fn1(){
+			var a=document.getElementById("third");
+			a.style.backgroundColor="green";
+			a.textContent="A good guy";
+			}
+			function fn2(){
+			var a=document.getElementById("third");
+			a.style.backgroundColor="yellow";
+			a.textContent="A nice guy";
+			}
+		</script>
+	</body>

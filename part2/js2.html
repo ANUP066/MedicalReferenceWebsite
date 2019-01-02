@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script> //type="text/javascript"
+			function Rectangle(len,breadth){
+				this.len=len;
+				this.breadth=breadth;
+				//this.area=this.len*this.breadth;
+				this.area=function()
+				{
+					return (this.len)*(this.breadth);
+				}
+			}
+			r1=new Rectangle(4,5);
+			r2=new Rectangle(7,8);
+			console.log(r1.area());
+			console.log(r2.area());
+			r1.type="solid rectangle";
+			r2.type="plain rectangle";
+			console.log(r1.type);
+			console.log(r2.type);
+		</script>
+
+
+	</head>
+	<body>
+	</body>
+</html>

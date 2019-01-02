@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LS PAGE1</title>
+</head>
+
+<body >
+
+<p id="p1">msg from different page</p>
+
+<script type="text/javascript">
+
+window.onstorage=changeFormat;
+
+//changeFormat();
+
+function changeFormat(e)
+{
+alert("in change")
+
+	//Get the key.
+
+	if(e.key == "msg" && localStorage.msg !== undefined )
+	{
+		alert("Message to this page:"+localStorage.msg);
+		
+	}
+
+	var h2 = document.getElementById("p1");
+	    h2.innerHTML = localStorage.msg;
+
+alert("New Value is:"+e.newValue);
+alert("Old Value is:"+e.oldValue);
+alert("The url is:"+e.url);
+
+}
+
+</script>
+</body>
+</html>

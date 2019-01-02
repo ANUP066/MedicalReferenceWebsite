@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://www.askapollo.com/physical-appointment/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="cache-control" content="max-age=120">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Doctor’s Appointment Online | Find a Doctor – Ask Apollo</title>
+    <meta name="description" content="Search for a Physician on Ask Apollo &amp; Book Appointments to seek medical advice, diagnosis or treatment. Reach out to best medical professionals here.">
+    <meta name="keywords" content="find a doctor in india, find a doctor, ask a doctor, doctor appointment, online doctor consultation, ask apollo">
+
+    <link href="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/style.css" rel="stylesheet">
+    <link href="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/responsive.css" rel="stylesheet">
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/analytics.js.download"></script><script async="" src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/gtm.js.download"></script><script src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/bootstrap.min.js.download" type="text/javascript"></script>
+    <script src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/jquery.min.js.download" type="text/javascript"></script>
+    <script type="text/javascript" src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/js"></script>
+    <link rel="stylesheet" href="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/jquery-ui.css">
+    <script type="text/javascript" src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/jquery-ui.js.download"></script>
+    <link rel="canonical" href="https://www.askapollo.com/physical-appointment">
+    
+    <style type="text/css">
+        
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var UserGeoLocationfromCookie = getCookie("UserGeoLocation");
+            if (UserGeoLocationfromCookie == "" || UserGeoLocationfromCookie == undefined) {
+                $("#ancCardiologist").attr("href", "https://www.askapollo.com/physical-appointment/doctors/cardiologist");
+                $("#ancNeurosurgeon").attr("href", "https://www.askapollo.com/physical-appointment/doctors/neurosurgeon");
+                $("#ancOrthopedician").attr("href", "https://www.askapollo.com/physical-appointment/doctors/orthopedician");
+                $("#ancNeurologist").attr("href", "https://www.askapollo.com/physical-appointment/doctors/neurologist");
+                $("#ancLiverTransplant").attr("href", "https://www.askapollo.com/physical-appointment/doctors/liver-transplant-surgeon");
+                $("#ancDentist").attr("href", "https://www.askapollo.com/physical-appointment/doctors/dentist");
+                $("#ancPsychiatrist").attr("href", "https://www.askapollo.com/physical-appointment/doctors/Psychiatrist");
+                $("#ancUrologist").attr("href", "https://www.askapollo.com/physical-appointment/doctors/Urologist");
+                $("#ancGynecologist").attr("href", "https://www.askapollo.com/physical-appointment/doctors/gynecologist");
+                $("#ancPediatrician").attr("href", "https://www.askapollo.com/physical-appointment/doctors/Pediatrician");
+            }
+            else {
+                $("#ancCardiologist").attr("href", "https://www.askapollo.com/physical-appointment/doctorsearch/" + UserGeoLocationfromCookie.toLowerCase() + "/cardiologist");
+                $("#ancNeurosurgeon").attr("href", "https://www.askapollo.com/physical-appointment/doctorsearch/" + UserGeoLocationfromCookie.toLowerCase() + "/neurosurgeon");
+                $("#ancOrthopedician").attr("href", "https://www.askapollo.com/physical-appointment/doctorsearch/" + UserGeoLocationfromCookie.toLowerCase() + "/orthopedician");
+                $("#ancNeurologist").attr("href", "https://www.askapollo.com/physical-appointment/doctorsearch/" + UserGeoLocationfromCookie.toLowerCase() + "/neurologist");
+                $("#ancLiverTransplant").attr("href", "https://www.askapollo.com/physical-appointment/doctorsearch/" + UserGeoLocationfromCookie.toLowerCase() + "/liver-transplant-surgeon");
+                $("#ancDentist").attr("href", "https://www.askapollo.com/physical-appointment/doctorsearch/" + UserGeoLocationfromCookie.toLowerCase() + "/dentist");
+                $("#ancPsychiatrist").attr("href", "https://www.askapollo.com/physical-appointment/doctorsearch/" + UserGeoLocationfromCookie.toLowerCase() + "/Psychiatrist");
+                $("#ancUrologist").attr("href", "https://www.askapollo.com/physical-appointment/doctorsearch/" + UserGeoLocationfromCookie.toLowerCase() + "/Urologist");
+                $("#ancGynecologist").attr("href", "https://www.askapollo.com/physical-appointment/doctorsearch/" + UserGeoLocationfromCookie.toLowerCase() + "/gynecologist");
+                $("#ancPediatrician").attr("href", "https://www.askapollo.com/physical-appointment/doctorsearch/" + UserGeoLocationfromCookie.toLowerCase() + "/Pediatrician");
+            }
+        });
+
+        $(document).ready(function () {
+            $.ajax({
+                url: "CityData.aspx", //Target URL for JSON file
+                contentType: 'application/json; charset=utf-8',
+                type: 'POST',
+                dataType: 'html',
+                async: false,
+                success: function (data) {
+                    $("#ddlCity").html(data);
+                    $("#ddlCity").find('option[group="1"]').wrapAll("<optgroup label='Top Cities'></optgroup>");
+                    $("#ddlCity").find('option[group="0"]').wrapAll("<optgroup label='Other Cities'></optgroup>");
+                },
+                error: function (xhr, status) { console.log(status); }
+            });
+        });
+        $(document).ready(function () {
+            $('input[name="rbnYes/No"]').attr('checked', false); $("#divValidationMsg").attr("style", "display:none");
+            $("#divValidationMsg").text(''); $("#txtUhid").prop('readonly', true); $("#ddlCities").val("");
+            $("#ddlHospitals").val(""); $("#txtUhid").val(""); $("#txtFirstName").val(""); $("#txtLastName").val("");
+            $("#txtMobileNo").val(""); $("#txtDescription").val(""); $("#txtEmailId").val(""); $("#rbnMale").prop('checked', false);
+            $("#rbnFemale").prop('checked', false); $("#rbnYes").prop('checked', false); $("#rbnNo").prop('checked', false);
+            $("#lblSuccessMsg").attr("style", "display:none"); $("#lblSuccessMsg").val("");
+            $("#txtMobileNo").keypress(function (e) {
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    return false;
+                }
+            });
+            $('.close').click(function () {
+                $("#divValidationMsg").attr("style", "display:none"); $("#divValidationMsg").text(''); $("#ddlCities").val('');
+                $("#ddlHospitals").val(''); $("#txtUhid").val(""); $("#txtFirstName").val(""); $("#txtLastName").val("");
+                $("#txtMobileNo").val(""); $("#txtDescription").val(""); $("#txtEmailId").val(""); $("#rbnMale").prop('checked', false);
+                $("#rbnFemale").prop('checked', false); $("#rbnYes").prop('checked', false); $("#rbnNo").prop('checked', false);
+                $("#txtUhid").prop('readonly', true); $("#lblSuccessMsg").attr("style", "display:none"); $("#lblSuccessMsg").val("");
+            });
+
+        });
+        function UhidVisibleTrue() { $("#txtUhid").prop('readonly', false); }
+        function UhidVisibleFalse() { $("#txtUhid").val(""); $("#txtUhid").prop('readonly', true); }
+        function validateOfNotSureOfSpeciality() {
+            $("#ddlCities").attr("required", false); $("#ddlHospitals").attr("required", false); $("#txtFirstName").attr("required", false);
+            $("#txtLastName").attr("required", false); $("#txtMobileNo").attr("required", false); $("#txtDescription").attr("required", false);
+            var cities = $("#ddlCities option:selected").text();
+            var cityId = $("#ddlCities").val();
+            var hospitals = $("#ddlHospitals option:selected").text();
+            var hospitalId = $("#ddlHospitals").val();
+            var firstName = $("#txtFirstName").val().trim();
+            var lastName = $("#txtLastName").val().trim();
+            var mobileNo = $("#txtMobileNo").val().trim();
+            var description = $("#txtDescription").val().trim();
+            if (cityId == '') {
+                $("#divValidationMsg").attr("style", "display:block"); $("#divValidationMsg").text("City is mandatory");
+                $("#ddlCities").focus(); return false;
+            }
+            if (hospitalId == '') {
+                $("#divValidationMsg").attr("style", "display:block"); $("#divValidationMsg").text("Hospital is mandatory");
+                $("#ddlHospitals").focus(); return false;
+            }
+            if (firstName === '') {
+                $("#divValidationMsg").attr("style", "display:block"); $("#divValidationMsg").text("First Name is mandatory");
+                $("#txtFirstName").focus(); return false;
+            }
+            if (lastName === '') {
+                $("#divValidationMsg").attr("style", "display:block"); $("#divValidationMsg").text("Last Name is mandatory");
+                $("#txtLastName").focus(); return false;
+            }
+            if (document.getElementById("rbnMale").checked == false && document.getElementById("rbnFemale").checked == false) {
+                $("#divValidationMsg").attr("style", "display:block"); $("#divValidationMsg").text("Gender is mandatory");
+                $("#rbnGender").focus(); return false;
+            }
+            if (mobileNo === '') {
+                $("#divValidationMsg").attr("style", "display:block"); $("#divValidationMsg").text("Mobile No is mandatory");
+                $("#txtMobileNo").focus(); return false;
+            }
+            if (mobileNo !== '') {
+                var mobre = /^(\91|0)?\d{10}$/;
+                if (!mobre.test(mobileNo)) {
+                    $("#divValidationMsg").attr("style", "display:block"); $("#divValidationMsg").text("Mobile No is not valid");
+                    $("#txtMobileNo").focus(); return false;
+                }
+            }
+            if (document.getElementById("rbnYes").checked == false && document.getElementById("rbnNo").checked == false) {
+                $("#divValidationMsg").attr("style", "display:block"); $("#divValidationMsg").text("Yes/No is mandatory");
+                return false;
+            }
+            if (description === '') {
+                $("#divValidationMsg").attr("style", "display:block"); $("#divValidationMsg").text("Description of Problem is mandatory");
+                $("#txtDescription").focus(); return false;
+            }
+            if (cityId != '' && hospitalId != '' && firstName != '' && lastName != '' && mobileNo != '' && description != '') {
+                $("#divshowlodinginleadform1").attr("style", "display:block");
+                var obj = {};
+                obj.cityName = $("#ddlCities option:selected").text();
+                obj.hospitalId = $("#ddlHospitals option:selected").val();
+                obj.hospitalName = $("#ddlHospitals option:selected").text();
+                obj.firstName = $.trim($("[id*=txtFirstName]").val());
+                obj.lastname = $.trim($("[id*=txtLastName]").val());
+                if (document.getElementById("rbnMale").checked == true) { obj.Gender = "0"; }
+                else if (document.getElementById("rbnFemale").checked == true) { obj.Gender = "1"; }
+                obj.mobileNo = "91" + $.trim($("[id*=txtMobileNo]").val());
+                obj.emailId = $.trim($("[id*=txtEmailId]").val());
+                if (document.getElementById("rbnYes").checked == true) { obj.isPrevRegistered = true; }
+                else if (document.getElementById("rbnNo").checked == true) { obj.isPrevRegistered = false; }
+                obj.uhid = $.trim($("[id*=txtUhid]").val());
+                obj.description = $.trim($("[id*=txtDescription]").val());
+                obj.createdIP = '115.254.80.53';
+                $.ajax({
+                    type: "POST",
+                    url: "WebService2.asmx/SaveUserDetails",
+                    data: '{obj:' + JSON.stringify(obj) + '}',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        $("#ddlCities").val(""); $("#ddlHospitals").val(""); $("#txtUhid").val(""); $("#txtFirstName").val("");
+                        $("#txtLastName").val(""); $("#txtMobileNo").val(""); $("#txtDescription").val("");
+                        $("#txtEmailId").val(""); $("#rbnMale").prop('checked', false); $("#rbnFemale").prop('checked', false);
+                        $("#rbnYes").prop('checked', false); $("#rbnNo").prop('checked', false);
+                        document.getElementById('lblSuccessMsg').style.display = 'inherit';
+                        $("#divValidationMsg").attr("style", "display:none"); $("#divValidationMsg").text('');
+                    }
+                });
+                return false;
+            }
+            return false;
+        }
+        function bindPopUpHospitals() {
+            var citiId = $("#ddlCities").val();
+            if (citiId == '') return false;
+            $.ajax({
+                url: "HospitalData.aspx?cityId=" + citiId, //Target URL for JSON file
+                contentType: 'application/json; charset=utf-8',
+                type: 'POST',
+                dataType: 'html',
+                async: false,
+                success: function (data) {
+                    $("#ddlHospitals").html(data);
+                    $("#ddlHospitals").find('option[group="1"]').wrapAll("<optgroup label='Hospitals'></optgroup>");
+                    $("#ddlHospitals").find('option[group="2"]').wrapAll("<optgroup label='Clinics'></optgroup>");
+                },
+                error: function (xhr, status) { console.log(status); }
+            });
+        }
+        function bindHospitals() {
+            var citiId = $("#ddlCity").val();
+            if (citiId == '')
+                return false;
+            $.ajax({
+                url: "HospitalData.aspx?cityId=" + citiId, //Target URL for JSON file
+                contentType: 'application/json; charset=utf-8',
+                type: 'POST',
+                dataType: 'html',
+                async: false,
+                success: function (data) {
+                    $("#ddlHospital").html(data);
+                    $("#ddlHospital").find('option[group="1"]').wrapAll("<optgroup label='Hospitals'></optgroup>");
+                    $("#ddlHospital").find('option[group="2"]').wrapAll("<optgroup label='Clinics'></optgroup>");
+                },
+                error: function (xhr, status) { console.log(status); }
+            });
+            setCacheData($("#ddlCity").val(), 0, 'false');
+        }
+        function setCacheData(cityid, hospitalid, IsHospitalChanged) {
+            $("#txtSpeDoc").prop("disabled", true);
+            $.ajax({
+                type: "POST",
+                url: "WebService2.asmx/SetAutoSuggestionCache",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify({ cityId1: cityid, hospitalId1: hospitalid, IsHospitalChanged1: IsHospitalChanged }),
+                dataType: "json",
+                success: function (data) {
+                    $("#txtSpeDoc").prop("disabled", false);
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) { }
+            });
+        }
+        $(function () {
+            $('#txtSpeDoc').autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        type: "POST",
+                        url: "WebService2.asmx/GetSuggestionData",
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify({ Searchtext1: request.term }),
+                        success: function (data) {
+                            var citiId = $("#ddlCity").val();
+                            if (citiId == '') {
+                                alert('Please Select your Location');
+                                $("#txtSpeDoc").val('');
+                                $("#lblSpeDoc").val('');
+                            }
+                            else {
+                                var json_obj = $.parseJSON(data.d);
+                                response($.map(json_obj, function (item) {
+                                    return {
+                                        label: item.label,
+                                        val: item.value1
+                                    }
+                                }))
+                            }
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) { }
+                    });
+                },
+                select: function (event, ui) {
+                    $("#txtSpeDoc").val(ui.item.label);
+                    $("#lblSpeDoc").val(ui.item.val);
+                    return false;
+                }
+            });
+        });
+        $(document).ready(function () {
+            $("#ddlCities").change(function () { bindPopUpHospitals(); });
+            $("#ddlCity")
+                .change(function () {
+                    var citiId = $("#ddlCity").val();
+                    var cityname = $("#ddlCity option:selected").text();
+                    cityname = cityname.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+                    if (citiId != '' || citiId != "" || cityname.toLowerCase() != "select your location") { setCookie("UserSessionCookie", cityname, 1); }
+                    $("#txtSpeDoc").prop("disabled", true);
+                    bindHospitals();
+                    $("#txtSpeDoc").val("");
+                    $("#lblSpeDoc").val("");
+                });
+            $("#ddlHospital")
+                .change(function () {
+                    $("#txtSpeDoc").prop("disabled", true);
+                    setCacheData($("#ddlCity").val(), $("#ddlHospital").val(), 'true');
+                    $("#txtSpeDoc").val("");
+                    $("#lblSpeDoc").val("");
+                });
+        });
+        function validation(nkey) { return validateAllowOnlyNumerics(nkey); }
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+        function setCookieForModalPopup(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+    </script>
+    <script type="text/javascript">
+        function test() {
+            $.ajax({
+                url: "AjaxCallsChromeHiddenButtonClicks.aspx", //Target URL for JSON file
+                contentType: 'application/json; charset=utf-8',
+                type: 'POST',
+                dataType: 'html',
+                async: false,
+                success: function (data) {
+                },
+                error: function (xhr, status) { console.log(status); }
+            });
+        }
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1);
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        var geocoder;
+        var UserGeoLocationfromCookie = getCookie("UserGeoLocation");
+        function successFunction(position) {
+            var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+            codeLatLng(lat, lng);
+        }
+        function errorFunction() { }
+        function initialize() {
+            var UserSessionCookie = getCookie("UserSessionCookie");
+            if (UserSessionCookie !== "" && UserSessionCookie != undefined) {
+                $("#ddlCity option:contains(" + UserSessionCookie + ")").attr('selected', 'selected');
+                bindHospitals();
+            }
+            else {
+                UserGeoLocationfromCookie = getCookie("UserGeoLocation");
+                if (UserGeoLocationfromCookie !== "" && UserGeoLocationfromCookie != undefined) {
+                    $("#lblUserLocation").addClass("map");
+                    $("#lblUserLocation").text(UserGeoLocationfromCookie);
+                    $("#ddlCity option:contains(" + UserGeoLocationfromCookie + ")").attr('selected', 'selected');
+                    bindHospitals();
+                }
+                else { if (navigator.geolocation) { navigator.geolocation.getCurrentPosition(successFunction, errorFunction); } }
+            }
+        }
+        function codeLatLng(lat, lng) {
+            var city = "";
+            geocoder = new google.maps.Geocoder();
+            var latlng = new google.maps.LatLng(lat, lng);
+            geocoder.geocode({ 'latLng': latlng }, function (results, status) {
+                if (status === google.maps.GeocoderStatus.OK) {
+                    console.log(results);
+                    if (results[1]) {
+                        for (var i = 0; i < results[0].address_components.length; i++) {
+                            for (var b = 0; b < results[0].address_components[i].types.length; b++) {
+                                if (results[0].address_components[i].types[b] === "locality") {
+                                    city = results[0].address_components[i];
+                                    break;
+                                }
+                            }
+                        }
+                        $("#lblUserLocation").addClass("map");
+                        $("#lblUserLocation").text(city.long_name);
+                        setCookie("UserGeoLocation", city.long_name, 30);
+                        $("#ddlCity option:contains(" + city.long_name + ")").attr('selected', 'selected');
+                        bindHospitals();
+                    } else {
+                        $("#lblUserLocation").addClass("redtext");
+                        $("#lblUserLocation").text("Location not found");
+                        alert("Location not found");
+                    }
+                } else {
+                    $("#lblUserLocation").addClass("redtext");
+                    $("#lblUserLocation").text("Geocoder failed due to: " + status);
+                    alert("Geocoder failed due to");
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function DoDoctorSearchByUserInput() {
+            if ($("#ddlCity").val() == '') {
+                $("#ddlCity").attr("required", true);
+                $("#ddlCity").attr("title", "City is required");
+                alert("City is required");
+                return false;
+            }
+			if (($("#lblSpeDoc").val() == '') && ($("#txtSpeDoc").val() != '')) {
+                alert("No results found. Please search by specialty or doctor name.No results found. Please search by specialty or doctor name.");
+                $("#txtSpeDoc").val("");
+                return false;
+            }
+            var ddlVal = $("#ddlHospital").val();
+            var ddlText = $("#ddlHospital option:selected").text();
+            var ddlCity = $("#ddlCity").val();
+            var ddlCityText = $("#ddlCity option:selected").text();
+            $.ajax({
+                url: "defaulthospitalvalues.aspx?dhosid=" + ddlVal + "&dhosval=" + ddlText, //Target URL for JSON file
+                contentType: 'application/json; charset=utf-8',
+                type: 'POST',
+                dataType: 'html',
+                async: false,
+                success: function (data) {
+                },
+                error: function (xhr, status) { console.log(status); }
+            });
+            $.ajax({
+                url: "defaulthospitalvalues.aspx?dcityid=" + ddlCity + "&dcityval=" + ddlCityText, //Target URL for JSON file
+                contentType: 'application/json; charset=utf-8',
+                type: 'POST',
+                dataType: 'html',
+                async: false,
+                success: function (data) {
+                },
+                error: function (xhr, status) {
+                    console.log(status);
+                }
+            });
+            $("#ddlCityId").val(ddlCity);
+            $("#ddlCityValue").val(ddlCityText);
+            $("#ddlHospitalId").val(ddlVal);
+            $("#ddlHospitalValue").val(ddlText);
+            var searchHidden = document.getElementById("LinkButton1");
+            searchHidden.click();
+            return true;
+        }
+        function validateAllowOnlyNumerics(nkey) {
+            var keyval;
+            if (navigator.appName == "Microsoft Internet Explorer") { keyval = window.event.keyCode; }
+            else if (navigator.appName == 'Netscape') { nkeycode = nkey.which; keyval = nkeycode; }
+            if (keyval >= 48 && keyval <= 57) { return true; }
+            else if (keyval == 0) { return true; } else if (keyval == 8) { return true; } else { return false; }
+        }
+    </script>
+<script type="text/javascript" charset="UTF-8" src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/util.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/stats.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/geocoder.js.download"></script></head>
+<body onload="initialize();" class="" style="">
+    <!-- Google Tag Manager -->
+    <noscript>
+        &lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-MP4262" height="0" width="0" style="display: none; visibility: hidden"&gt;&lt;/iframe&gt;</noscript>
+    <script>(function (w, d, s, l, i) {
+w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-MP4262');</script>
+    <!-- End Google Tag Manager -->
+    <form method="post" action="https://www.askapollo.com/physical-appointment/" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0MTk3NTExOTAPZBYCZg9kFgRmDw8WAh4EVGV4dAUNMTg2MCA1MDAgMTA2NmRkAggPEA8WBh4NRGF0YVRleHRGaWVsZAUIQ2l0eU5hbWUeDkRhdGFWYWx1ZUZpZWxkBQZDaXR5SWQeC18hRGF0YUJvdW5kZ2QQFS4UU2VsZWN0IFlvdXIgTG9jYXRpb24JQmVuZ2FsdXJ1B0NoZW5uYWkJSHlkZXJhYmFkB0tvbGthdGEGTXVtYmFpCU5ldyBEZWxoaQlBaG1lZGFiYWQIQW1yaXRzYXIIQXJhZ29uZGEKQXVyYW5nYWJhZAZCaGlsYWkLQmh1YmFuZXN3YXIIQmlsYXNwdXIKQ2hhbmRpZ2FyaApDb2ltYmF0b3JlCERlaHJhZHVuCUZhcmlkYWJhZAtHYW5kaGluYWdhcglHaGF6aWFiYWQJR29yYWtocHVyCEd1d2FoYXRpB0d3YWxpb3IGSW5kb3JlBkphaXB1cghLYWtpbmFkYQZLYW5udXIGS2FucHVyCUthcmFpa3VkaQtLYXJpbSBOYWdhcgVLYXJ1cgdMdWNrbm93B01hZHVyYWkGTXlzb3JlBU5hc2lrB05lbGxvcmUFTm9pZGEEUHVuZQZSYWlwdXIFU3VyYXQFVGhhbmUIVGlydXBhdGkGVHJpY2h5ClRyaXZhbmRydW0IVmFkb2RhcmENVmlzYWtoYXBhdG5hbRUuAAQzMDE1ATECMTICMTMEMzk4OQQyNzQxBDI3NjEENDM5NQI5NQQzODk3BDYzNzQENDE5OQQ2MzczBDQ0MTMENDc5MQQ1ODY3BDI4OTUEMjgwMwQ1ODk5BDU5MDcEMjIwNwQzNjk5BDM3MDcENDUzOQM2NjMEMzM3MQQ1OTM5BDQ5NDUDNzUzBDQ5NTEENTk1NQQ1MDgxBDMxNzUEMzk5OQQxMjIzBDYwMDkENDAwNwQ2Mzg4BDI4NjcENDAzNwQxODI3BDU2NDEEMzU3MQQyODczBDE5ODMUKwMuZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYIBQdyYm5NYWxlBQdyYm5NYWxlBQlyYm5GZW1hbGUFCXJibkZlbWFsZQUGcmJuWWVzBQZyYm5ZZXMFBXJibk5vBQVyYm5ObxjYNfjykOJKshHPMxotQdvNqohBIBU2mLIPzCJtXad9">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="569FD209">
+</div>
+        <header>
+            <div class="container-fluid slider">
+                <div class="header">
+                    <div class="container stick-head">
+                        <div class="col-sm-3 col-sm-3 col-xs-4  logo"><a href="https://www.askapollo.com/" title="Ask Apollo Home"><img src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/logo.png" alt="Ask Apollo Logo" style="width: 224px; height: 72px;"></a></div>
+                        <div class="col-sm-9 col-sm-9 col-xs-8 contact-number text-right"><p class="blue-big"><span class="phone-icon"><img src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/icon-phone.png" alt="Help Line" style="width: 30px; height: 29px;"></span><span id="lblGlobalPhoneNumber" class="number">1860 500 1066</span></p>
+                           <div class="location" style="display: none;"><div id="lblUserLocation"></div></div>
+                            <nav class="navbar navbar-default">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                
+                                <div class="navbar-collapse collapse" id="myNavbar" aria-expanded="true">
+                                    <ul class="hidden-xs nav navbar-nav">
+                                        <li><a href="https://www.askapollo.com/physical-appointment/#top-specialitiesnav">Top Specialities</a></li>
+                                        <li><a href="https://www.askapollo.com/physical-appointment/#patient-speaknav">Patient Speak</a></li>
+                                        <li><a href="https://www.askapollo.com/physical-appointment/#health-cornernav">Health Corner</a></li>
+                                        <li class="dropdown"><a class="dropbtn" href="javascript:void(0);" data-toggle="dropdown">Quick Links</a>
+                                            <ul class="dropdown-content dropdown-menu">
+                                                <li><a href="https://www.askapollo.com/online-consultation/">Consult Online</a></li>
+                                                <li><a href="https://www.askapollo.com/healthrecord/">View Health Records</a></li>
+                                                <li><a href="https://www.askapollo.com/physical-appointment/bookhealthcheckappointment.aspx">Book Health Check</a></li>
+                                                <li><a href="https://www.askapollo.com/physical-appointment/homecarerequest.aspx">Request Homecare</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="https://www.askapollo.com/physical-appointment/login.aspx">Login</a></li>
+                                        <li class="sign-up"><a href="https://www.askapollo.com/physical-appointment/signup.aspx">Sign up</a></li>
+                                    </ul>
+                                    <ul class="hidden-lg hidden-md hidden-sm nav navbar-nav">
+                                        <li><a href="https://www.askapollo.com/physical-appointment/#top-specialitiesnav">Top Specialities</a></li>
+                                        <li><a href="https://www.askapollo.com/physical-appointment/#patient-speaknav">Patient Speak</a></li>
+                                        <li><a href="https://www.askapollo.com/physical-appointment/#health-cornernav">Health Corner</a></li>
+                                        <li class="dropdown"><a href="javascript:void(0);" data-toggle="dropdown">Quick Links</a>
+                                            <ul class="dropdown-content dropdown-menu">
+                                                <li><a href="https://www.askapollo.com/online-consultation/">Consult Online</a></li>
+                                                <li><a href="https://www.askapollo.com/healthrecord/">View Health Records</a></li>
+                                                <li><a href="https://www.askapollo.com/physical-appointment/bookhealthcheckappointment.aspx">Book Health Check</a></li>
+                                                <li><a href="https://www.askapollo.com/physical-appointment/homecarerequest.aspx">Request Homecare</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="https://www.askapollo.com/physical-appointment/login.aspx">Login</a></li>
+                                        <li class="sign-up"><a href="https://www.askapollo.com/physical-appointment/signup.aspx">Sign up</a></li>
+                                    </ul>
+                                </div>
+                                
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="post-banner">
+                        <h1>Find and Book <span>Appointments with Doctors</span></h1>
+                        <div class="search-form">
+                            <div class="col-sm-3"><div class="select"><select name="ddlCity" id="ddlCity" class="form-control" required="true"><option value="">Select City</option><optgroup label="Top Cities"><option value="3015" group="1">Bengaluru</option><option value="1" group="1">Chennai</option><option value="12" group="1">Hyderabad</option><option value="13" group="1">Kolkata</option><option value="3989" group="1">Mumbai</option><option value="2741" group="1">New Delhi</option></optgroup><optgroup label="Other Cities"><option value="2761" group="0">Ahmedabad</option><option value="4395" group="0">Amritsar</option><option value="95" group="0">Aragonda</option><option value="3897" group="0">Aurangabad</option><option value="6374" group="0">Bhilai</option><option value="4199" group="0">Bhubaneswar</option><option value="6373" group="0">Bilaspur</option><option value="4413" group="0">Chandigarh</option><option value="4791" group="0">Coimbatore</option><option value="5867" group="0">Dehradun</option><option value="2895" group="0">Faridabad</option><option value="2803" group="0">Gandhinagar</option><option value="5899" group="0">Ghaziabad</option><option value="5907" group="0">Gorakhpur</option><option value="2207" group="0">Guwahati</option><option value="3699" group="0">Gwalior</option><option value="3707" group="0">Indore</option><option value="4539" group="0">Jaipur</option><option value="663" group="0">Kakinada</option><option value="3371" group="0">Kannur</option><option value="5939" group="0">Kanpur</option><option value="4945" group="0">Karaikudi</option><option value="753" group="0">Karim Nagar</option><option value="4951" group="0">Karur</option><option value="5955" group="0">Lucknow</option><option value="5081" group="0">Madurai</option><option value="3175" group="0">Mysore</option><option value="3999" group="0">Nasik</option><option value="1223" group="0">Nellore</option><option value="6009" group="0">Noida</option><option value="4007" group="0">Pune</option><option value="6388" group="0">Raipur</option><option value="2867" group="0">Surat</option><option value="4037" group="0">Thane</option><option value="1827" group="0">Tirupati</option><option value="5641" group="0">Trichy</option><option value="3571" group="0">Trivandrum</option><option value="2873" group="0">Vadodara</option><option value="1983" group="0">Visakhapatnam</option></optgroup></select></div></div>
+                            <div class="col-sm-3"><div class="select"><select name="ddlHospital" id="ddlHospital" class="form-control">
+	<option value="">Select your Hospital/Clinic</option>
+
+</select></div></div>
+                            <div class="col-sm-6">
+                                <div class="input-group add-on"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input name="txtSpeDoc" type="text" id="txtSpeDoc" class="form-control ui-autocomplete-input" placeholder="Enter Primary Speciality/Super Speciality/Doctor Name" autocomplete="off"><input type="hidden" name="lblSpeDoc" id="lblSpeDoc">
+                                <div class="input-group-btn"><button type="button" class="btn btn-default" onclick="DoDoctorSearchByUserInput();"><i class="glyphicon glyphicon-search"></i></button><a id="LinkButton1" href="javascript:__doPostBack(&#39;LinkButton1&#39;,&#39;&#39;)" style="display: none;"></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="h-search-link hidden-xs">Not sure of the speciality?<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click Here</button></p>
+                        <div class="modal fade appointment-query" id="myModal" role="dialog" style="display: none;">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button><h4 class="modal-title notsurespecialityheading">Tell us about your Problem</h4></div>
+                                    <div class="modal-body">
+                                        
+                                            <span class="green-text success-msg"><span id="lblSuccessMsg" style="display:none">Thank you for submitting your details. Our Help Desk will contact you at the earliest.</span></span>
+                                            <div class="mandatory-text pull-right"><span id="lblMandatoryFields" style="color: red; font-size: 11px;">* Indicates mandatory fields</span></div>
+                                            <div id="divValidationMsg" style="display:none" class="red-text"></div>
+                                            <div class="form-group"><label class="control-label col-xs-4"><span class="mandatory">*</span> City :</label><div class="col-xs-8"><select name="ddlCities" id="ddlCities" class="form-control">
+	<option value="">Select Your Location</option>
+	<option value="3015">Bengaluru</option>
+	<option value="1">Chennai</option>
+	<option value="12">Hyderabad</option>
+	<option value="13">Kolkata</option>
+	<option value="3989">Mumbai</option>
+	<option value="2741">New Delhi</option>
+	<option value="2761">Ahmedabad</option>
+	<option value="4395">Amritsar</option>
+	<option value="95">Aragonda</option>
+	<option value="3897">Aurangabad</option>
+	<option value="6374">Bhilai</option>
+	<option value="4199">Bhubaneswar</option>
+	<option value="6373">Bilaspur</option>
+	<option value="4413">Chandigarh</option>
+	<option value="4791">Coimbatore</option>
+	<option value="5867">Dehradun</option>
+	<option value="2895">Faridabad</option>
+	<option value="2803">Gandhinagar</option>
+	<option value="5899">Ghaziabad</option>
+	<option value="5907">Gorakhpur</option>
+	<option value="2207">Guwahati</option>
+	<option value="3699">Gwalior</option>
+	<option value="3707">Indore</option>
+	<option value="4539">Jaipur</option>
+	<option value="663">Kakinada</option>
+	<option value="3371">Kannur</option>
+	<option value="5939">Kanpur</option>
+	<option value="4945">Karaikudi</option>
+	<option value="753">Karim Nagar</option>
+	<option value="4951">Karur</option>
+	<option value="5955">Lucknow</option>
+	<option value="5081">Madurai</option>
+	<option value="3175">Mysore</option>
+	<option value="3999">Nasik</option>
+	<option value="1223">Nellore</option>
+	<option value="6009">Noida</option>
+	<option value="4007">Pune</option>
+	<option value="6388">Raipur</option>
+	<option value="2867">Surat</option>
+	<option value="4037">Thane</option>
+	<option value="1827">Tirupati</option>
+	<option value="5641">Trichy</option>
+	<option value="3571">Trivandrum</option>
+	<option value="2873">Vadodara</option>
+	<option value="1983">Visakhapatnam</option>
+
+</select></div></div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group"><label class="control-label col-xs-4"><span class="mandatory">*</span> Hospitals :</label><div class="col-xs-8"><select name="ddlHospitals" id="ddlHospitals" class="form-control">
+	<option value="">Select Hospital</option>
+
+</select></div></div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group"><label class="control-label col-xs-4"><span class="mandatory">*</span> First Name :</label><div class="col-xs-8"><input name="txtFirstName" type="text" id="txtFirstName" class="form-control" placeholder="First Name"></div></div>
+                                            <div class="form-group"><label class="control-label col-xs-4"><span class="mandatory">*</span> Last Name :</label><div class="col-xs-8"><input name="txtLastName" type="text" id="txtLastName" class="form-control" placeholder="Last Name"></div></div>
+                                            <div class="form-group"><label class="control-label col-xs-4"><span class="mandatory">*</span> Gender :</label><div class="col-xs-8 radio-btn-cols">
+                                                <span name="rbnGender"><input id="rbnMale" type="radio" name="Gender" value="rbnMale"><label for="rbnMale">Male</label></span>   
+                                                <span name="rbnGender"><input id="rbnFemale" type="radio" name="Gender" value="rbnFemale"><label for="rbnFemale">Female</label></span></div>
+                                            </div>
+                                            <div class="form-group"><label class="control-label col-xs-4"><span class="mandatory">*</span> Mobile No :</label><div class="col-xs-8"><input name="txtMobileNo" type="text" maxlength="10" id="txtMobileNo" class="form-control" placeholder="10 digit mobile number"></div></div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group"><label class="control-label col-xs-4">E-Mail ID :</label><div class="col-xs-8"><input name="txtEmailId" type="text" id="txtEmailId" class="form-control" placeholder="email@gmail.com"></div></div>
+                                            <div class="form-group"><label class="control-label col-xs-4"><span class="mandatory">*</span> Have you registered in Apollo Hospitals before?</label><div class="col-xs-8 radio-btn-cols">
+                                                    <span name="rbnYes/No" onchange="UhidVisibleTrue()"><input id="rbnYes" type="radio" name="Register" value="rbnYes"><label for="rbnYes">Yes</label></span>
+                                                    <span name="rbnYes/No" onchange="UhidVisibleFalse()"><input id="rbnNo" type="radio" name="Register" value="rbnNo"><label for="rbnNo">No</label></span></div>
+                                            </div>
+                                            <div class="form-group"><label class="control-label col-xs-4"><span class="mandatory">*</span> UHID :</label><div class="col-xs-8"><input name="txtUhid" type="text" id="txtUhid" class="form-control" readonly=""></div></div>
+                                            <div class="form-group"><label class="control-label col-xs-4"><span class="mandatory">*</span> Description of the Problem :</label><div class="col-xs-8"><textarea name="txtDescription" rows="2" cols="20" id="txtDescription" class="form-control"></textarea></div></div>
+                                            <div class="form-group"><div class="col-lg-4"></div><div class="col-xs-8"><button type="button" id="btnSubmit" class="btn btn-info" onclick="validateOfNotSureOfSpeciality()">Submit</button></div></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header></form>
+        <section>
+            <div class="container-fluid why-choose-us">
+                <div class="container"><h2 class="section-title"><span class="blue-title">Other</span> Services</h2>
+                    <a href="https://www.askapollo.com/online-consultation/" target="_blank" title="online-consultation"><div class="col-md-3 col-sm-6 col-xs-6"><div class="icon-sec select-location"></div><h3>Online <span class="blue">Consultation</span></h3></div></a>
+                    <a href="https://www.askapollo.com/physical-appointment/BookHealthCheckAppointment.aspx" target="_blank" title="HealthCheckAppointment"><div class="col-md-3 col-sm-6 col-xs-6"><div class="icon-sec choose-hospital"></div><h3>Book <span class="blue">Health Check</span></h3></div></a>
+                    <a href="https://www.askapollo.com/healthrecord/" target="_blank" title="healthrecord"><div class="col-md-3 col-sm-6 col-xs-6"><div class="icon-sec select-doctor"></div><h3>Online <span class="blue">Health Records</span></h3></div></a>
+                    <a href="https://www.askapollo.com/physical-appointment/homecarerequest.aspx" target="_blank" title="homecarerequest"><div class="col-md-3 col-sm-6 col-xs-6"><div class="icon-sec book-appointment"></div><h3>Request <span class="blue">Homecare</span></h3></div></a>
+                </div><div id="top-specialitiesnav"></div>
+            </div>
+            <div class="container-fluid specialities">
+                <div class="container" id="top-specialities"><h2 class="section-title"><span class="blue-title">TOP </span>SPECIALITIES</h2>
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-6"><a href="https://www.askapollo.com/physical-appointment/speciality-doctor/cardiology"><div class="icon-sec cardiologist"></div><h3>Cardiologist</h3></a></div>
+                        <div class="col-sm-3 col-xs-6"><a href="https://www.askapollo.com/physical-appointment/speciality-doctor/neurosurgery"><div class="icon-sec neurosurgeon"></div><h3>Neurosurgeon</h3></a></div>
+                        <div class="col-sm-3 col-xs-6"><a href="https://www.askapollo.com/physical-appointment/speciality-doctor/orthopaedics"><div class="icon-sec orthopedician"></div><h3>Orthopedician</h3></a></div>
+                        <div class="col-sm-3 col-xs-6"><a href="https://www.askapollo.com/physical-appointment/speciality-doctor/oncology"><div class="icon-sec oncologist"></div><h3>Oncologist</h3></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-6"><a href="https://www.askapollo.com/physical-appointment/speciality-doctor/neurology"><div class="icon-sec neurologist"></div><h3>Neurologist</h3></a></div>
+                        <div class="col-sm-3 col-xs-6"><a href="https://www.askapollo.com/physical-appointment/speciality-doctor/Gastroenterology"><div class="icon-sec neurosurgeon2"></div><h3>Gastroenterologist</h3></a></div>
+                        <div class="col-sm-3 col-xs-6"><a href="https://www.askapollo.com/physical-appointment/speciality-doctor/liver-transplant"><div class="icon-sec liver-transplant"></div><h3>Liver Transplant Surgeon</h3></a></div>
+                        <div class="col-sm-3 col-xs-6"><a href="https://www.askapollo.com/physical-appointment/speciality-doctor/dental"><div class="icon-sec dentist"></div><h3>Dentist</h3></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-6"><a href="https://www.askapollo.com/physical-appointment/speciality-doctor/psychiatry"><div class="icon-sec psychiatrist"></div><h3>Psychiatrist</h3></a></div>
+                        <div class="col-sm-3 col-xs-6"><a href="https://www.askapollo.com/physical-appointment/speciality-doctor/urology"><div class="icon-sec urologist"></div><h3>Urologist</h3></a></div>
+                        <div class="col-sm-3 col-xs-6"><a href="https://www.askapollo.com/physical-appointment/speciality-doctor/gynaecology"><div class="icon-sec gynecologist"></div><h3>Gynecologist</h3></a></div>
+                        <div class="col-sm-3 col-xs-6"><a href="https://www.askapollo.com/physical-appointment/speciality-doctor/paediatrics"><div class="icon-sec pediatrician"></div><h3>Pediatrician</h3></a></div>
+                    </div>
+                </div><div id="patient-speaknav"></div><div id="health-cornernav"></div>
+            </div><div class="clear"></div>
+            <div class="container blog-list"><div class="col-md-6 col-sm-6 col-xs-12" id="patient-speak"><h2 class="section-title"><span class="blue-title">PATIENT</span> SPEAK</h2>
+                    <div class="row"><div class="col-md-12"><div class="text"><p>Very good. Highly Recommended <br>- Chetena Sharma</p></div></div></div>
+                    <div class="row"><div class="col-md-12"><div class="text"><p>5 star service. Very good doctors, informative<br>- Arjun Singh</p></div></div></div>
+                    <div class="row"><div class="col-md-12"><div class="text"><p>Excellent platform. Booked my health check from here and saved hours at the hospital<br>- Sunith Kumar</p></div></div></div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12" id="health-corner">
+                    <h2 class="section-title"><span class="blue-title">HEALTH</span> CORNER</h2>
+                    <div class="row">
+                        <div class="col-md-2 col-sm-3 col-xs-3 padding-right-none"><span class="img"><img class="img-responsive" src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/banner1.jpg" alt="" style="width: 68px; height: 68px;"></span></div>
+                        <div class="col-md-10 col-sm-9 col-xs-9"><div class="text"><h4><a href="http://blog.askapollo.com/liver-care/world-hepatitis-day/" target="_blank">World Hepatitis Day</a></h4><p>World Hepatitis Day is observed on 28th July in the memory and respect of Dr. Baruch Samuel Blumberg, person who identified Hepatitis B Virus and later developed its diagnostic test and vaccine.</p></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-sm-3 col-xs-3 padding-right-none"><span class="img"><img class="img-responsive" src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/banner2.jpg" alt="" style="width: 68px; height: 68px;"></span></div>
+                        <div class="col-md-10 col-sm-9 col-xs-9"><div class="text"><h4><a href="http://blog.askapollo.com/healthy-living/breast-milk-the-best-food-your-child-can-get/" target="_blank">Breast Milk – The Best Food Your Child Can Get</a></h4><p>Caring for and nurturing a newborn baby is overwhelming. It is the initial nourishment and care that determines the overall health of a baby.</p></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-sm-3 col-xs-3 padding-right-none"><span class="img"><img class="img-responsive" src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/banner3.jpg" alt="" style="width: 68px; height: 68px;"></span></div>
+                        <div class="col-md-10 col-sm-9 col-xs-9"><div class="text"><h4><a href="http://blog.askapollo.com/top-slider/get-more-from-life-with-age-management/" target="_blank">Get more from Life with Age Management</a></h4><p>Show me one person who is not willing to look younger and prettier than they are and I will show you a flying unicorn. To look good is a universal desire.</p></div></div>
+                    </div><span class="view-more"><a href="http://blog.askapollo.com/" target="_blank">View more...</a></span>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container-fluid footer">
+                <div class="container footer-block"><div class="col-sm-2">
+                        <ul class="list-inline"><li><a class="city-name" title="Doctors In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru">Bengaluru</a>
+                                <ul>
+									 <li><h4><a title="Gynecologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/gynecologist-and-obstetrician">Gynecologist In Bengaluru</a></h4></li>
+									 <li><h4><a title="Orthopedic In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/orthopedician">Orthopedic In Bengaluru</a></h4></li>
+									 <li><h4><a title="Neurologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/neurologist">Neurologist In Bengaluru</a></h4></li>
+									 <li><h4><a title="Dermatologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/dermatologist">Dermatologist In Bengaluru</a></h4></li>
+									 <li><h4><a title="Pediatrician In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/pediatrician">Pediatrician In Bengaluru</a></h4></li>
+									 <li><h4><a title="Urologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/urologist-and-andrologist">Urologist In Bengaluru</a></h4></li>
+									 <li><h4><a title="Cardiologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/cardiologist">Cardiologist In Bengaluru</a></h4></li>
+									 <li><h4><a title="Gastroenterologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/gastroenterologist">Gastroenterologist In Bengaluru</a></h4></li>
+									 <li><h4><a title="Oncologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/oncologist">Oncologist In Bengaluru</a></h4></li>
+									 <li><h4><a title="Diabetologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/diabetologist">Diabetologist In Bengaluru</a></h4></li>
+								 </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <ul class="list-inline"><li><a class="city-name" title="Doctors In Chennai" href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai">Chennai</a>
+                                <ul>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/cardiologist" title="Cardiologist In Chennai">Cardiologist In Chennai</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/gynecologist-and-obstetrician" title="Gynecologist In Chennai">Gynecologist In Chennai</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/orthopedician" title="Orthopedic In Chennai">Orthopedic In Chennai</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/neurologist" title="Neurologist In Chennai">Neurologist In Chennai</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/dermatologist" title="Dermatologist In Chennai">Dermatologist In Chennai</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/pediatrician" title="Pediatrician In Chennai">Pediatrician In Chennai</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/urologist-and-andrologist" title="Urologist In Chennai">Urologist In Chennai</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/gastroenterologist" title="Gastroenterologist In Chennai">Gastroenterologist In Chennai</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/oncologist" title="Oncologist In Chennai">Oncologist In Chennai</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/diabetologist" title="Diabetologist In Chennai">Diabetologist In Chennai</a></h4></li>
+								 </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <ul class="list-inline"><li><a class="city-name" title="Doctors In Delhi" href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi">Delhi</a>
+                                 <ul>
+                                    <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/gynecologist-and-obstetrician" title="Gynecologist In Delhi">Gynecologist In Delhi</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/orthopedician" title="Orthopedic In Delhi">Orthopedic In Delhi</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/neurologist" title="Neurologist In Delhi">Neurologist In Delhi</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/dermatologist" title="Dermatologist In Delhi">Dermatologist In Delhi</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/pediatrician" title="Pediatrician In Delhi">Pediatrician In Delhi</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/urologist-and-andrologist" title="Urologist In Delhi">Urologist In Delhi</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/cardiologist" title="Cardiologist In Delhi">Cardiologist In Delhi</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/gastroenterologist" title="Gastroenterologist In Delhi">Gastroenterologist In Delhi</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/oncologist" title="Oncologist In Delhi">Oncologist In Delhi</a></h4></li>
+									 <li> <h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/diabetologist" title="Diabetologist In Delhi">Diabetologist In Delhi</a></h4></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <ul class="list-inline"><li><a class="city-name" title="Doctors In Hyderabad" href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad">Hyderabad</a>
+                                <ul>
+                                    <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/gynecologist-and-obstetrician" title="Gynecologist In Hyderabad">Gynecologist In Hyderabad</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/orthopedician" title="Orthopedic In Hyderabad">Orthopedic In Hyderabad</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/neurologist" title="Neurologist In Hyderabad">Neurologist In Hyderabad</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/dermatologist" title="Dermatologist In Hyderabad">Dermatologist In Hyderabad</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/pediatrician" title="Pediatrician In Hyderabad">Pediatrician In Hyderabad</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/urologist-and-andrologist" title="Urologist In Hyderabad">Urologist In Hyderabad</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/cardiologist" title="Cardiologist In Hyderabad">Cardiologist In Hyderabad</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/gastroenterologist" title="Gastroenterologist In Hyderabad">Gastroenterologist In Hyderabad</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/oncologist" title="Oncologist In Hyderabad">Oncologist In Hyderabad</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/diabetologist" title="Diabetologist In Hyderabad">Diabetologist In Hyderabad</a></h4></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <ul class="list-inline"><li><a class="city-name" title="Doctors In Kolkata" href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata">Kolkata</a>
+                                <ul>
+                                    <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/gynecologist-and-obstetrician" title="Gynecologist In Kolkata">Gynecologist In Kolkata</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/orthopedician" title="Orthopedic In Kolkata">Orthopedic In Kolkata</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/neurologist" title="Neurologist In Kolkata">Neurologist In Kolkata</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/dermatologist" title="Dermatologist In Kolkata">Dermatologist In Kolkata</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/pediatrician" title="Pediatrician In Kolkata">Pediatrician In Kolkata</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/urologist-and-andrologist" title="Urologist In Kolkata">Urologist In Kolkata</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/cardiologist" title="Cardiologist In Kolkata">Cardiologist In Kolkata</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/gastroenterologist" title="Gastroenterologist In Kolkata">Gastroenterologist In Kolkata</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/oncologist" title="Oncologist In Kolkata">Oncologist In Kolkata</a></h4></li>
+									 <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/diabetologist" title="Diabetologist In Kolkata">Diabetologist In Kolkata</a></h4></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><div class="clearfix"></div>
+                    <div class="footer-head">Apollo Directories</div>
+						<ul class="apollo-directories">
+							<li><a href="https://www.askapollo.com/physical-appointment/specialistdirectory.aspx" title="Specialist Index">Specialist Index</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/specialtydirectory.aspx" title="Speciality Index">Speciality Index</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/city-index.aspx" title="City Index">City Index</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/city-speciality-index.aspx" title="City Speciality Index">City Speciality Index</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/city-specialist-index.aspx" title="City Specialist Index">City Specialist Index</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/locality-city-index.aspx" title="Locality City Index">Locality City Index</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/doctorsindex.aspx" title="Doctors Index">Doctors Index</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/doctors.aspx" title="Apollo Doctors">Apollo Doctors</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/city-hyperlocations-specialities.aspx" title="City Locality Specialist Index">City Locality Specialist Index</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/hospitals-healthcheck-list.aspx" title="Health Checks Directory">Health Checks Directory</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/ladydoctorsindex.aspx" title="Lady Doctors">Lady Doctors</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/specialities-diseases.aspx" title="Diseases Index">Diseases Index</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/specialities-treatments.aspx" title="Treatments Index">Treatments Index</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/city-groupname-specialities.aspx" title="City Groupname Index">City Groupname Index</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/diseases-complication-glossary.aspx" title="Medical Glossary">Medical Glossary</a></li>
+							<li><a href="https://www.askapollo.com/physical-appointment/city-hospitals.aspx" title="City Hospitals Index">City Hospitals Index</a></li>
+						</ul>
+					<div class="clearfix"></div>
+                    <div class="footer-head">Apollo Blog – Trending Articles</div>
+                    <ul class="apollo-directories">
+                        <li><a target="_blank" href="http://blog.askapollo.com/top-slider/zika-an-alarming-caution/">Zika Virus</a></li>
+                        <li><a target="_blank" href="http://blog.askapollo.com/heart-care/heart-transplantation/">Heart Transplantation</a></li>
+                        <li><a target="_blank" href="http://blog.askapollo.com/healthy-living/the-flu-is-coming/">The “Flu” is coming</a></li>
+                        <li><a target="_blank" href="http://blog.askapollo.com/top-slider/tips-to-manage-childhood-asthma/">Tips To Manage Childhood Asthma</a></li>
+                    </ul><div class="clearfix"></div>
+                    <div class="other-cities">
+                        <div class="footer-head cities-head" data-toggle="collapse" data-target="#other-cities">Other Cities <i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div>
+                        <div id="other-cities" class="collapse col-sm-12 padding-none other-cities">
+                            <div class="col-sm-2">
+                                <ul>
+                                    <li><h4><a title="Doctors in Ahmedabad" href="https://www.askapollo.com/physical-appointment/doctorsearch/ahmedabad">Doctors in Ahmedabad</a></h4></li>
+                                    <li><h4><a title="Doctors in Aragonda" href="https://www.askapollo.com/physical-appointment/doctorsearch/aragonda">Doctors in Aragonda</a></h4></li>
+                                    <li><h4><a title="Doctors in Bhilai" href="https://www.askapollo.com/physical-appointment/doctorsearch/bhilai">Doctors in Bhilai</a></h4></li>
+                                    <li><h4><a title="Doctors in Bhubaneswar" href="https://www.askapollo.com/physical-appointment/doctorsearch/bhubaneswar">Doctors in Bhubaneswar</a></h4></li>
+                                    <li><h4><a title="Doctors in Bilaspur" href="https://www.askapollo.com/physical-appointment/doctorsearch/bilaspur">Doctors in Bilaspur</a></h4></li>
+                                    <li><h4><a title="Doctors in Coimbatore" href="https://www.askapollo.com/physical-appointment/doctorsearch/coimbatore">Doctors in Coimbatore</a></h4></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-2">
+                                <ul>
+                                    <li><h4><a title="Doctors in Ghaziabad" href="https://www.askapollo.com/physical-appointment/doctorsearch/ghaziabad">Doctors in Ghaziabad</a></h4></li>
+                                    <li><h4><a title="Doctors in Gorakhpur" href="https://www.askapollo.com/physical-appointment/doctorsearch/gorakhpur">Doctors in Gorakhpur</a></h4></li>
+                                    <li><h4><a title="Doctors in Kakinada" href="https://www.askapollo.com/physical-appointment/doctorsearch/kakinada">Doctors in Kakinada</a></h4></li>
+                                    <li><h4><a title="Doctors in Karaikudi" href="https://www.askapollo.com/physical-appointment/doctorsearch/karaikudi">Doctors in Karaikudi</a></h4></li>
+                                    <li><h4><a title="Doctors in Karimnagar" href="https://www.askapollo.com/physical-appointment/doctorsearch/karim-nagar">Doctors in Karimnagar</a></h4></li>
+                                    <li><h4><a title="Doctors in Karur" href="https://www.askapollo.com/physical-appointment/doctorsearch/karur">Doctors in Karur</a></h4></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-2">
+                                <ul>
+                                    <li><h4><a title="Doctors in Lucknow" href="https://www.askapollo.com/physical-appointment/doctorsearch/lucknow">Doctors in Lucknow</a></h4></li>
+                                    <li><h4><a title="Doctors in Madurai" href="https://www.askapollo.com/physical-appointment/doctorsearch/madurai">Doctors in Madurai</a></h4></li>
+                                    <li><h4><a title="Doctors in Mumbai" href="https://www.askapollo.com/physical-appointment/doctorsearch/mumbai">Doctors in Mumbai</a></h4></li>
+                                    <li><h4><a title="Doctors in Mysore" href="https://www.askapollo.com/physical-appointment/doctorsearch/mysore">Doctors in Mysore</a></h4></li>
+                                    <li><h4><a title="Doctors in Nashik" href="https://www.askapollo.com/physical-appointment/doctorsearch/nasik">Doctors in Nashik</a></h4></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-2">
+                                <ul>
+                                    <li><h4><a title="Doctors in Nellore" href="https://www.askapollo.com/physical-appointment/doctorsearch/nellore">Doctors in Nellore</a></h4></li>
+                                    <li><h4><a title="Doctors in Noida" href="https://www.askapollo.com/physical-appointment/doctorsearch/noida">Doctors in Noida</a></h4></li>
+                                    <li><h4><a title="Doctors in Pune" href="https://www.askapollo.com/physical-appointment/doctorsearch/pune">Doctors in Pune</a></h4></li>
+                                    <li><h4><a title="Doctors in Raipur" href="https://www.askapollo.com/physical-appointment/doctorsearch/raipur">Doctors in Raipur</a></h4></li>
+                                    <li><h4><a title="Doctors in Surat" href="https://www.askapollo.com/physical-appointment/doctorsearch/surat">Doctors in Surat</a></h4></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-2">
+                                <ul>
+                                    <li><h4><a title="Doctors in Thane" href="https://www.askapollo.com/physical-appointment/doctorsearch/thane">Doctors in Thane</a></h4></li>
+                                    <li><h4><a title="Doctors in Tirupati" href="https://www.askapollo.com/physical-appointment/doctorsearch/tirupati">Doctors in Tirupati</a></h4></li>
+                                    <li><h4><a title="Doctors in Trichy" href="https://www.askapollo.com/physical-appointment/doctorsearch/trichy">Doctors in Trichy</a></h4></li>
+                                    <li><h4><a title="Doctors in Vadodara" href="https://www.askapollo.com/physical-appointment/doctorsearch/vadodara">Doctors in Vadodara</a></h4></li>
+                                    <li><h4><a title="Doctors in Visakhapatnam" href="https://www.askapollo.com/physical-appointment/doctorsearch/visakhapatnam">Doctors in Visakhapatnam</a></h4>/li&gt;
+                                </li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-blocks-m">
+             <div class="block"><div class="city-name" data-toggle="collapse" data-target="#block-none">Bengaluru <i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div><div id="block-none" class="collapse col-sm-12 padding-none">
+                     <ul>
+                         <li><h4><a title="Gynecologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/gynecologist-and-obstetrician">Gynecologist In Bengaluru</a></h4></li>
+                         <li><h4><a title="Orthopedic In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/orthopedician">Orthopedic In Bengaluru</a></h4></li>
+                         <li><h4><a title="Neurologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/neurologist">Neurologist In Bengaluru</a></h4></li>
+                         <li><h4><a title="Dermatologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/dermatologist">Dermatologist In Bengaluru</a></h4></li>
+                         <li><h4><a title="Pediatrician In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/pediatrician">Pediatrician In Bengaluru</a></h4></li>
+                         <li><h4><a title="Urologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/urologist-and-andrologist">Urologist In Bengaluru</a></h4></li>
+                         <li><h4><a title="Cardiologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/cardiologist">Cardiologist In Bengaluru</a></h4></li>
+                         <li><h4><a title="Gastroenterologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/gastroenterologist">Gastroenterologist In Bengaluru</a></h4></li>
+                         <li><h4><a title="Oncologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/oncologist">Oncologist In Bengaluru</a></h4></li>
+                         <li><h4><a title="Diabetologist In Bengaluru" href="https://www.askapollo.com/physical-appointment/doctorsearch/bengaluru/groupname/diabetologist">Diabetologist In Bengaluru</a></h4></li>
+                     </ul>
+                 </div>
+             </div>
+             <div class="block">
+                 <div class="city-name" data-toggle="collapse" data-target="#block-two">Chennai <i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div><div id="block-two" class="collapse col-sm-12 padding-none">
+                      <ul>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/cardiologist" title="Cardiologist In Chennai">Cardiologist In Chennai</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/gynecologist-and-obstetrician" title="Gynecologist In Chennai">Gynecologist In Chennai</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/orthopedician" title="Orthopedic In Chennai">Orthopedic In Chennai</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/neurologist" title="Neurologist In Chennai">Neurologist In Chennai</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/dermatologist" title="Dermatologist In Chennai">Dermatologist In Chennai</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/pediatrician" title="Pediatrician In Chennai">Pediatrician In Chennai</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/urologist-and-andrologist" title="Urologist In Chennai">Urologist In Chennai</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/gastroenterologist" title="Gastroenterologist In Chennai">Gastroenterologist In Chennai</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/oncologist" title="Oncologist In Chennai">Oncologist In Chennai</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/chennai/groupname/diabetologist" title="Diabetologist In Chennai">Diabetologist In Chennai</a></h4></li>
+                     </ul>
+                 </div>
+             </div>
+             <div class="block">
+                 <div class="city-name" data-toggle="collapse" data-target="#block-three">Delhi <i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div><div id="block-three" class="collapse col-sm-12 padding-none">
+                     <ul>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/gynecologist-and-obstetrician" title="Gynecologist In Delhi">Gynecologist In Delhi</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/orthopedician" title="Orthopedic In Delhi">Orthopedic In Delhi</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/neurologist" title="Neurologist In Delhi">Neurologist In Delhi</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/dermatologist" title="Dermatologist In Delhi">Dermatologist In Delhi</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/pediatrician" title="Pediatrician In Delhi">Pediatrician In Delhi</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/urologist-and-andrologist" title="Urologist In Delhi">Urologist In Delhi</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/cardiologist" title="Cardiologist In Delhi">Cardiologist In Delhi</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/gastroenterologist" title="Gastroenterologist In Delhi">Gastroenterologist In Delhi</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/oncologist" title="Oncologist In Delhi">Oncologist In Delhi</a></h4></li>
+                         <li> <h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/new-delhi/groupname/diabetologist" title="Diabetologist In Delhi">Diabetologist In Delhi</a></h4></li>
+                     </ul>
+                 </div>
+             </div>
+             <div class="block">
+                 <div class="city-name" data-toggle="collapse" data-target="#block-four">Hyderabad <i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div><div id="block-four" class="collapse col-sm-12 padding-none">
+                     <ul>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/gynecologist-and-obstetrician" title="Gynecologist In Hyderabad">Gynecologist In Hyderabad</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/orthopedician" title="Orthopedic In Hyderabad">Orthopedic In Hyderabad</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/neurologist" title="Neurologist In Hyderabad">Neurologist In Hyderabad</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/dermatologist" title="Dermatologist In Hyderabad">Dermatologist In Hyderabad</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/pediatrician" title="Pediatrician In Hyderabad">Pediatrician In Hyderabad</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/urologist-and-andrologist" title="Urologist In Hyderabad">Urologist In Hyderabad</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/cardiologist" title="Cardiologist In Hyderabad">Cardiologist In Hyderabad</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/gastroenterologist" title="Gastroenterologist In Hyderabad">Gastroenterologist In Hyderabad</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/oncologist" title="Oncologist In Hyderabad">Oncologist In Hyderabad</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/diabetologist" title="Diabetologist In Hyderabad">Diabetologist In Hyderabad</a></h4></li>
+                     </ul>
+                 </div>
+             </div>
+             <div class="block">
+                 <div class="city-name" data-toggle="collapse" data-target="#block-five">Kolkata <i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div><div id="block-five" class="collapse col-sm-12 padding-none">
+                     <ul>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/gynecologist-and-obstetrician" title="Gynecologist In Kolkata">Gynecologist In Kolkata</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/orthopedician" title="Orthopedic In Kolkata">Orthopedic In Kolkata</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/neurologist" title="Neurologist In Kolkata">Neurologist In Kolkata</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/dermatologist" title="Dermatologist In Kolkata">Dermatologist In Kolkata</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/pediatrician" title="Pediatrician In Kolkata">Pediatrician In Kolkata</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/urologist-and-andrologist" title="Urologist In Kolkata">Urologist In Kolkata</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/kolkata/groupname/cardiologist" title="Cardiologist In Kolkata">Cardiologist In Kolkata</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/gastroenterologist" title="Gastroenterologist In Kolkata">Gastroenterologist In Kolkata</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/oncologist" title="Oncologist In Kolkata">Oncologist In Kolkata</a></h4></li>
+                         <li><h4><a href="https://www.askapollo.com/physical-appointment/doctorsearch/hyderabad/groupname/diabetologist" title="Diabetologist In Kolkata">Diabetologist In Kolkata</a></h4></li>
+                     </ul>
+                 </div>
+             </div>
+             <div class="block">
+                 <div class="city-name" data-toggle="collapse" data-target="#block-six">Apollo Directories <i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div>
+                 <div id="block-six" class="collapse col-sm-12 padding-none">
+                     <ul>
+                         <li><a href="https://www.askapollo.com/physical-appointment/specialistdirectory.aspx" title="Specialist Index">Specialist Index</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/specialtydirectory.aspx" title="Speciality Index">Speciality Index</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/city-index.aspx" title="City Index">City Index</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/city-speciality-index.aspx" title="City Speciality Index">City Speciality Index</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/city-specialist-index.aspx" title="City Specialist Index">City Specialist Index</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/locality-city-index.aspx" title="Locality City Index">Locality City Index</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/doctorsindex.aspx" title="Doctors Index">Doctors Index</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/doctors.aspx" title="Apollo Doctors">Apollo Doctors</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/city-hyperlocations-specialities.aspx" title="City Locality Specialist Index">City Locality Specialist Index</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/hospitals-healthcheck-list.aspx" title="Health Checks Directory">Health Checks Directory</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/ladydoctorsindex.aspx" title="Lady Doctors">Lady Doctors</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/specialities-diseases.aspx" title="Diseases Index">Diseases Index</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/specialities-treatments.aspx" title="Treatments Index">Treatments Index</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/city-groupname-specialities.aspx" title="City Groupname Index">City Groupname Index</a></li>
+                         <li><a href="https://www.askapollo.com/physical-appointment/diseases-complication-glossary.aspx" title="Medical Glossary">Medical Glossary</a></li>
+                     </ul>
+                 </div>
+             </div>
+             <div class="block">
+                 <div class="city-name" data-toggle="collapse" data-target="#block-seven">Other Cities <i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div>
+                 <div id="block-seven" class="collapse col-sm-12 padding-none">
+                     <ul>
+                         <li><h4><a title="Doctors in Ahmedabad" href="https://www.askapollo.com/physical-appointment/doctorsearch/ahmedabad">Doctors in Ahmedabad</a></h4></li>
+                         <li><h4><a title="Doctors in Aragonda" href="https://www.askapollo.com/physical-appointment/doctorsearch/aragonda">Doctors in Aragonda</a></h4></li>
+                         <li><h4><a title="Doctors in Bhilai" href="https://www.askapollo.com/physical-appointment/doctorsearch/bhilai">Doctors in Bhilai</a></h4></li>
+                         <li><h4><a title="Doctors in Bhubaneswar" href="https://www.askapollo.com/physical-appointment/doctorsearch/bhubaneswar">Doctors in Bhubaneswar</a></h4></li>
+                         <li><h4><a title="Doctors in Bilaspur" href="https://www.askapollo.com/physical-appointment/doctorsearch/bilaspur">Doctors in Bilaspur</a></h4></li>
+                         <li><h4><a title="Doctors in Coimbatore" href="https://www.askapollo.com/physical-appointment/doctorsearch/coimbatore">Doctors in Coimbatore</a></h4></li>
+                         <li><h4><a title="Doctors in Ghaziabad" href="https://www.askapollo.com/physical-appointment/doctorsearch/ghaziabad">Doctors in Ghaziabad</a></h4></li>
+                         <li><h4><a title="Doctors in Gorakhpur" href="https://www.askapollo.com/physical-appointment/doctorsearch/gorakhpur">Doctors in Gorakhpur</a></h4></li>
+                         <li><h4><a title="Doctors in Kakinada" href="https://www.askapollo.com/physical-appointment/doctorsearch/kakinada">Doctors in Kakinada</a></h4></li>
+                         <li><h4><a title="Doctors in Karaikudi" href="https://www.askapollo.com/physical-appointment/doctorsearch/karaikudi">Doctors in Karaikudi</a></h4></li>
+                         <li><h4><a title="Doctors in Karimnagar" href="https://www.askapollo.com/physical-appointment/doctorsearch/karim-nagar">Doctors in Karimnagar</a></h4></li>
+                         <li><h4><a title="Doctors in Karur" href="https://www.askapollo.com/physical-appointment/doctorsearch/karur">Doctors in Karur</a></h4></li>
+                         <li><h4><a title="Doctors in Lucknow" href="https://www.askapollo.com/physical-appointment/doctorsearch/lucknow">Doctors in Lucknow</a></h4></li>
+                         <li><h4><a title="Doctors in Madurai" href="https://www.askapollo.com/physical-appointment/doctorsearch/madurai">Doctors in Madurai</a></h4></li>
+                         <li><h4><a title="Doctors in Mumbai" href="https://www.askapollo.com/physical-appointment/doctorsearch/mumbai">Doctors in Mumbai</a></h4></li>
+                         <li><h4><a title="Doctors in Mysore" href="https://www.askapollo.com/physical-appointment/doctorsearch/mysore">Doctors in Mysore</a></h4></li>
+                         <li><h4><a title="Doctors in Nashik" href="https://www.askapollo.com/physical-appointment/doctorsearch/nasik">Doctors in Nashik</a></h4></li>
+                         <li><h4><a title="Doctors in Nellore" href="https://www.askapollo.com/physical-appointment/doctorsearch/nellore">Doctors in Nellore</a></h4></li>
+                         <li><h4><a title="Doctors in Noida" href="https://www.askapollo.com/physical-appointment/doctorsearch/noida">Doctors in Noida</a></h4></li>
+                         <li><h4><a title="Doctors in Pune" href="https://www.askapollo.com/physical-appointment/doctorsearch/pune">Doctors in Pune</a></h4></li>
+                         <li><h4><a title="Doctors in Raipur" href="https://www.askapollo.com/physical-appointment/doctorsearch/raipur">Doctors in Raipur</a></h4></li>
+                         <li><h4><a title="Doctors in Surat" href="https://www.askapollo.com/physical-appointment/doctorsearch/surat">Doctors in Surat</a></h4></li>
+                         <li><h4><a title="Doctors in Thane" href="https://www.askapollo.com/physical-appointment/doctorsearch/thane">Doctors in Thane</a></h4></li>
+                         <li><h4><a title="Doctors in Tirupati" href="https://www.askapollo.com/physical-appointment/doctorsearch/tirupati">Doctors in Tirupati</a></h4></li>
+                         <li><h4><a title="Doctors in Trichy" href="https://www.askapollo.com/physical-appointment/doctorsearch/trichy">Doctors in Trichy</a></h4></li>
+                         <li><h4><a title="Doctors in Vadodara" href="https://www.askapollo.com/physical-appointment/doctorsearch/vadodara">Doctors in Vadodara</a></h4></li>
+                         <li><h4><a title="Doctors in Visakhapatnam" href="https://www.askapollo.com/physical-appointment/doctorsearch/visakhapatnam">Doctors in Visakhapatnam</a></h4></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+            <div class="container"><div class="bottom"><p class="pull-left">Copyright - 2016. Apollo Hospitals Group. All Rights Reserved.</p><div class="footer-links pull-right">
+                  <p><a href="https://www.askapollo.com/">Home</a>  |  
+                     <a href="https://www.askapollo.com/physical-appointment/aboutus.aspx">About Us </a>|  
+                     <a target="_blank" href="http://blog.askapollo.com/">Blog</a>  |  
+                     <a href="https://www.askapollo.com/physical-appointment/faq.aspx">Faqs</a>  |  
+                     <a href="https://www.askapollo.com/physical-appointment/Contactus.aspx">Contact us</a>  |  
+                     <a href="https://www.askapollo.com/physical-appointment/sitemap.aspx" class="last">Sitemap</a></p>
+                        <div class="social-media pull-right">
+                            <a class="fb" onclick="dataLayer.push({&#39;event&#39;:&#39;GAevent&#39;, &#39;gaEventCategory&#39;:&#39;Facebook-footer&#39;, &#39;gaEventAction&#39;:&#39;Click&#39;, &#39;gaEventLabel&#39;:&#39;Social plugin&#39;});" target="_blank" href="https://www.facebook.com/AskApolloOnline/"></a>
+                            <a class="twitter" onclick="dataLayer.push({&#39;event&#39;:&#39;GAevent&#39;, &#39;gaEventCategory&#39;:&#39;Twitter-footer&#39;, &#39;gaEventAction&#39;:&#39;Click&#39;, &#39;gaEventLabel&#39;:&#39;Social plugin&#39;});" target="_blank" href="https://twitter.com/askapollo"></a>
+                            <a class="youtube" onclick="dataLayer.push({&#39;event&#39;:&#39;GAevent&#39;, &#39;gaEventCategory&#39;:&#39;YouTube-footer&#39;, &#39;gaEventAction&#39;:&#39;Click&#39;, &#39;gaEventLabel&#39;:&#39;Social plugin&#39;});" target="_blank" href="https://www.youtube.com/user/apollohospitalsindia"></a>
+                            <a class="gplus" onclick="dataLayer.push({&#39;event&#39;:&#39;GAevent&#39;, &#39;gaEventCategory&#39;:&#39;Googleplus-footer&#39;, &#39;gaEventAction&#39;:&#39;Click&#39;, &#39;gaEventLabel&#39;:&#39;Social plugin&#39;});" target="_blank" href="https://plus.google.com/115191416965300213774"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <input type="hidden" name="ddlHospitalId" id="ddlHospitalId" value="0"><input type="hidden" name="ddlHospitalValue" id="ddlHospitalValue" value="0"><input type="hidden" name="ddlCityId" id="ddlCityId" value="0"><input type="hidden" name="ddlCityValue" id="ddlCityValue" value="0">
+        <script src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/bootstrap.min.js.download"></script><script src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/owlcarouselmin.js.download"></script><script src="./Book Doctor’s Appointment Online _ Find a Doctor – Ask Apollo1_files/custom.js.download"></script>
+        <script>
+            $(document).ready(function () {
+                $("a").on('click', function (event) {
+                    if (this.hash !== "") {
+                        event.preventDefault(); var hash = this.hash; $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function () { });
+                    }
+                });
+                $(".nav li a").click(function () { var headerHeight = $(".stick-head").outerHeight() - 10; $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - headerHeight }, 1000); return false; });
+                $(window).scroll(function () {
+                    scroll = $(window).scrollTop();
+                    if (scroll >= 50) { $(".header").addClass("sticky-header"); } else { $(".header").removeClass("sticky-header"); }
+                });
+            });
+        </script>        
+    
+
+
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","1512240332405389");fbq("track","PageView");</script>
+<noscript></noscript>
+
+</div></body></html>
